@@ -1457,3 +1457,270 @@ h1,h2,h3,h4,h5,h6,p {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 320px) {
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* чтобы можно было отрегулировать отступ сверху */
+    width: 100%;
+  }
+
+  /* Логотип */
+  .logo-link {
+    display: inline-block;
+    margin-top: 17.5px; /* отступ от верхней границы */
+  }
+
+  /* Гамбургер справа */
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 17.5px; /* чтобы совпадало с логотипом по вертикали */
+    margin-right: 52px; /* отступ от правого края */
+  }
+
+  .burger-menu span {
+    display: block;
+    height: 2px;
+    background-color: #000;
+    border-radius: 1px;
+  }
+
+  /* Скрываем обычное меню и контакты */
+  .nav-menu,
+  .contact-info {
+    display: none;
+  }
+}
+
+  .burger-menu span:nth-child(1) { top: 0; }
+  .burger-menu span:nth-child(2) { top: 7.5px; }
+  .burger-menu span:nth-child(3) { top: 15px; }
+
+  .contact-info {
+    width: 320px;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  .contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+  }
+
+
+
+
+@media (max-width: 320px) {
+  /* Контейнер секции */
+  .team-section .container {
+    width: 320px;
+    padding: 0 16px 0 14px; /* слева 14px, справа 16px */
+    margin: 0 auto;
+  }
+
+  /* Сетка карточек */
+  .team-list {
+    display: flex;
+    flex-direction: column; /* карточки идут сверху вниз */
+    gap: 16px;              /* расстояние между карточками */
+    align-items: center;     /* центрируем карточки по горизонтали */
+  }
+
+  .team-item {
+    width: 100%;            /* каждая карточка занимает всю ширину контейнера */
+    max-width: 288px;       /* 320px минус 14+16px отступов */
+    box-sizing: border-box;
+  }
+
+@media screen and (max-width: 320px) {
+  .features-list {
+    display: flex;          /* включаем flex */
+    flex-direction: column; /* карточки вертикально */
+    gap: 16px;              /* расстояние между карточками */
+    padding: 0;
+    margin: 0;
+  }
+
+  .feature-item {
+    width: 288px;           /* фиксированная ширина карточки */
+    margin: 0 auto;         /* центрируем по экрану */
+    text-align: center;     /* содержимое по центру */
+  }
+
+  .icon-container {
+    margin-bottom: 8px;     /* отступ снизу иконки */
+  }
+
+  .feature-title {
+    margin-bottom: 4px;
+    font-size: 16px;
+  }
+
+  .feature-text {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+
+
+@media (max-width: 320px) {
+  /* Заголовок Our Team */
+  .team-title {
+    text-align: center;       /* по центру */
+    display: block;
+    margin-left: 69px;        /* отступ слева */
+    margin-right: auto;       /* автоматически компенсируем справа */
+    white-space: nowrap;      /* в одну строку */
+    margin-bottom: 24px;      /* отступ снизу */
+  }
+
+  /* Сетка карточек */
+  .team-list {
+    display: flex;
+    flex-direction: column;   /* вертикальный ряд */
+    align-items: center;      /* центрируем карточки */
+    gap: 16px;                /* промежуток между карточками */
+    margin-left: 14px;   /* отступ справа */
+    box-sizing: border-box;
+  }
+
+  /* Каждая карточка */
+  .team-item {
+    width: 100%;              /* занимают всю ширину контейнера с паддингами */
+    max-width: 264px;         /* если хотим ограничить ширину карточки */
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .portfolio-list {
+    display: flex;
+    flex-direction: column;  /* карточки друг под другом */
+    gap: 16px;               /* расстояние между карточками */
+    padding: 0;
+    margin: 0 auto;
+  }
+
+  .portfolio-item {
+    width: 288px;            /* фиксированная ширина карточки */
+    max-width: 90%;          /* чтобы не вылезала за экран */
+    margin: 0 auto;          /* центрируем карточку */
+    box-sizing: border-box;  /* учитываем padding и border */
+  }
+
+  .portfolio-img-container img {
+    width: 100%;             /* картинка растягивается на всю ширину карточки */
+    height: auto;            /* сохраняем пропорции */
+  }
+
+  .portfolio-info {
+    text-align: center;      /* выравниваем текст по центру */
+  }
+
+  .portfolio-item-title,
+  .portfolio-item-text {
+    margin: 4px 0;
+  }
+
+  .portfolio-overlay-text {
+    font-size: 12px;         /* уменьшаем текст для маленького экрана */
+    line-height: 1.4;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .footer-flex {
+    display: flex;            /* активируем flex */
+    flex-direction: column;   /* вертикальный порядок блоков */
+    align-items: center;      /* центрируем блоки по горизонтали */
+    gap: 16px;                /* расстояние между блоками */
+    padding: 16px 0;
+  }
+
+  /* Все внутренние блоки футера */
+  .footer-info,
+  .footer-social,
+  .subscribe-container {
+    width: 288px;             /* фиксированная ширина блоков */
+    max-width: 90%;           /* не вылезают за экран */
+    text-align: center;       /* выравниваем текст по центру */
+  }
+
+  /* Логотип по центру */
+  .logo-link {
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  /* Соцсети в ряд, центрируем */
+  .social-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+  }
+
+  /* Форма подписки */
+  .subscribe-form {
+    display: flex;
+    flex-direction: column; /* вертикально */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .subscribe-input {
+    width: 100%;            /* поле на всю ширину блока */
+    box-sizing: border-box; /* учитываем padding */
+  }
+
+  .subscribe-btn {
+    display: flex;
+    align-items: center;     /* текст и иконка по центру вертикали */
+    justify-content: center;
+    gap: 6px;                /* расстояние между текстом и иконкой */
+  }
+}
+
+
+@media (max-width: 480px) { /* под смартфоны */
+  .modal {
+    display: none; /* скрываем модальное окно */
+  }
+}
+}
