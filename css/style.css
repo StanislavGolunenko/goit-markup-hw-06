@@ -774,10 +774,10 @@ h1,h2,h3,h4,h5,h6,p {
   color: #ffffff;
 }
 
-/* Форма */
 .subscribe-form {
   display: flex;
-  gap: 24px;
+  align-items: center;   /* выравниваем по центру вертикали */
+  gap: 16px;
 }
 
 /* Label */
@@ -804,28 +804,52 @@ h1,h2,h3,h4,h5,h6,p {
   color: #ffffff;
 }
 
-/* Кнопка */
 .subscribe-btn {
-  min-width: 165px;
-  height: 40px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-  cursor: pointer;
-  background-color: #4D5AE5;
+  justify-content: center;
+  gap: 8px; 
+  padding: 0 16px;
+  height: 40px;
   border: none;
   border-radius: 4px;
+  background-color: #4d5ae5;
+  color: #fff;
+  cursor: pointer;
+  line-height: 1; 
+  margin-top: 4px;
 }
 
 /* Иконка */
 .subscribe-icon {
   margin-left: 16px;
+}
+
+.subscribe-form {
+  display: flex;            
+  align-items: center;     
+  gap: 16px;                
+}
+
+.subscribe-input {
+  width: 264px;         
+  height: 40px;     
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 14px;
+  
+}
+
+
+
+.subscribe-btn:hover {
+  background-color: #404bbf;
+}
+
+.subscribe-text {
+  display: inline-block;
 }
 
 
@@ -1103,9 +1127,333 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 
+/* Планшетная версия: ширина до 768px */
+@media (max-width: 768px) {
+
+  /* Хедер */
+  .header-container {
+    display: flex;
+    justify-content: space-between; /* логотип слева, контакты справа */
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .main-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .nav-menu {
+    display: flex;
+    gap: 16px;
+  }
+
+  /* Контакты справа, email над телефоном */
+  .contact-list {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    gap: 4px;
+  }
 
 
+  .hero-title {
+    font-size: 36px;
+    max-width: 90%;
+    margin: 0 auto 24px;
+    line-height: 1.3;
+    white-space: normal; /* перенос текста на две строки */
+  }
 
+  .hero-button {
+    display: inline-block;
+    margin: 0 auto;
+  }
+
+  /* Модальное окно по центру */
+  .modal-window,
+  .modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 408px;
+    min-height: auto;
+    margin: 0 !important;
+    box-sizing: border-box;
+    z-index: 1000;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  /* Контейнер для планшета */
+  .hero-section .container {
+    max-width: 100%;    /* занимать всю ширину экрана */
+    padding: 0 20px;    /* немного отступов по бокам */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;  /* заголовок над кнопкой */
+    align-items: center;     /* центрируем по горизонтали */
+    justify-content: center; /* центрируем по вертикали при необходимости */
+  }
+
+  /* Заголовок */
+  .hero-title {
+    font-size: 36px;
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 24px; /* отступ до кнопки */
+  }
+
+  /* Кнопка */
+  .hero-button {
+    display: inline-block;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Контейнер всей секции */
+  .features-section .container {
+    display: flex;
+    flex-direction: column;      /* контент сверху вниз */
+    align-items: center;         /* центрируем по горизонтали */
+    margin: 0 auto;              /* центрируем контейнер */
+    max-width: 100%;             /* занимать всю ширину экрана */
+    padding: 0 16px;             /* отступы слева и справа */
+    box-sizing: border-box;      /* чтобы padding учитывался */
+  }
+
+  /* Контейнер списка фич */
+  .features-list {
+    display: grid !important;               /* отменяем flex */
+    grid-template-columns: repeat(2, 1fr);  /* 2 карточки в ряд */
+    gap: 24px;
+    width: 100%;                            /* чтобы занимать всю ширину контейнера */
+    justify-items: center;                  /* центрируем карточки внутри ячеек */
+  }
+
+  /* Карточки */
+  .feature-item {
+    width: 100% !important;                 /* занимают всю ширину ячейки */
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 600px;   /* центрируем всю сетку */
+    margin: 0 auto;
+    justify-items: center;
+  }
+
+  .portfolio-item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Контейнер секции */
+  .team-section .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* выравниваем содержимое слева */
+    padding-left: 108px;     /* отступ слева */
+    padding-right: 16px;     /* отступ справа */
+    box-sizing: border-box;
+    text-align: left;        /* заголовок тоже слева */
+  }
+
+ .team-title {
+    margin-left: 200px; /* сдвигаем заголовок вправо */
+    margin-bottom: 24px; /* отступ до карточек */
+  }
+
+  /* Список карточек */
+  .team-list {
+    display: grid;
+    grid-template-columns: repeat(2, auto); /* 2 карточки в ряд */
+    gap: 24px;
+    justify-items: start; /* выравниваем карточки по левому краю */
+  }
+
+  /* Карточки */
+  .team-item {
+    width: auto;  /* сохраняем исходный размер */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Контейнер секции */
+  .portfolio-section .container {
+    max-width: 100%;        /* контейнер растягивается на всю ширину */
+    padding: 0 16px;        /* отступы слева и справа */
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  /* Контейнер карточек */
+  .portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* центрируем все карточки */
+    gap: 24px;
+  }
+
+  /* Каждая карточка остаётся без изменений */
+  .portfolio-item {
+    flex: 0 1 48%;  /* 2 карточки в ряд */
+    max-width: 48%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 768px) {
+    .footer {
+    background-color: #2e2f42;
+    color: #f4f4fd;
+    padding-top: 96px;       /* верхний отступ */
+    padding-bottom: 96px;    /* нижний отступ */
+    padding-left: 108px;     /* левый отступ для всего контента */
+    padding-right: 108px;    /* правый отступ */
+    box-sizing: border-box;
+  }
+
+  .footer-flex {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 24px;
+    max-width: calc(100% - 216px); /* учитываем слева и справа по 108px */
+    margin: 0; /* сетка уже смещена через padding футера */
+  }
+
+  /* Первый ряд */
+  .footer-info {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    width: 264px;       /* фиксированная ширина для текста */
+    text-align: left;
+  }
+
+  .footer-social {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: -198px;
+  }
+
+  /* Второй ряд */
+  .subscribe-form {
+    display: grid;
+    grid-template-columns: 264px 1fr; /* поле ввода 264px, кнопка занимает оставшееся место */
+    gap: 24px;                        /* отступ между полем и кнопкой */
+    width: 100%;
+  }
+
+  .subscribe-input {
+    grid-column: 1 / 2;
+    width: 264px;
+    padding: 12px 14px;
+    border-radius: 4px;
+    border: 1px solid rgba(255,255,255,0.3);
+    background-color: transparent;
+    color: #fff;
+    box-sizing: border-box;
+  }
+
+  .subscribe-btn {
+    grid-column: 2 / 3;
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 4px;
+    border: none;
+    background-color: #4d5ae5;
+    color: #fff;
+    cursor: pointer;
+    box-sizing: border-box;
+  }
+
+  /* Соцсети */
+  .social-list {
+    display: flex;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+  }
+
+  .social-link svg {
+    fill: #fff;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Фон модального окна */
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(46, 47, 66, 0.4);
+    display: flex;
+    justify-content: center; /* по горизонтали */
+    align-items: flex-start; /* вертикально сверху */
+    padding-top: 144px;      /* отступ сверху */
+    margin: 0;
+    z-index: 9999;
+  }
+
+  /* Само модальное окно */
+  .modal-window {
+    position: relative;
+    width: 90%;
+    max-width: 400px;
+    min-height: 632px; /* исходная 584px + 48px */
+    background-color: #fcfcfc;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    transform: none;
+    left: auto;
+    top: auto;
+  }
+
+  /* Кнопка закрытия */
+  .modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+}
 
 
 
