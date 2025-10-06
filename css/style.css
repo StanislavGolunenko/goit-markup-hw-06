@@ -99,6 +99,7 @@ body {
 /* Контакти */
 .contact-list {
   display: flex;
+  flex-direction: row;
   gap: 40px;
   list-style: none;
 }
@@ -373,7 +374,7 @@ button {
 
 
 .team-item {
-  width: calc((100% - 72px) / 4);
+  width: 264px;  
   border-radius: 0 0 4px 4px;
   background-color: #fff;
    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -842,8 +843,6 @@ h1,h2,h3,h4,h5,h6,p {
   
 }
 
-
-
 .subscribe-btn:hover {
   background-color: #404bbf;
 }
@@ -851,6 +850,7 @@ h1,h2,h3,h4,h5,h6,p {
 .subscribe-text {
   display: inline-block;
 }
+
 
 
 
@@ -1125,6 +1125,13 @@ h1,h2,h3,h4,h5,h6,p {
   background-color: #2e2f42; 
   z-index: 999;        
 }
+
+
+
+
+
+
+
 
 
 /* Планшетная версия: ширина до 768px */
