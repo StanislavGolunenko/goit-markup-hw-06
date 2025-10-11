@@ -1238,6 +1238,7 @@ h1,h2,h3,h4,h5,h6,p {
     width: 100% !important; /* занимают всю ширину ячейки */ 
     box-sizing: border-box; 
   } 
+
   .icon-container { 
     display: none; 
   } 
@@ -1260,6 +1261,7 @@ h1,h2,h3,h4,h5,h6,p {
     margin: 0 auto; 
     justify-items: center; 
   } 
+
   .portfolio-item { 
     width: 100%; 
   } 
@@ -1287,7 +1289,7 @@ h1,h2,h3,h4,h5,h6,p {
     column-gap: 24px;  /* горизонтальное расстояние между карточками */
     row-gap: 64px; 
     justify-items: start;
-    margin-left: -48px;
+    margin-left: -4px;
     
   } 
   /* Карточки */ 
@@ -1624,30 +1626,37 @@ h1,h2,h3,h4,h5,h6,p {
     display: flex; 
     flex-direction: column; /* карточки одна под другой */ 
     gap: 48px; /* расстояние между карточками */ 
-    align-items: center; /* центрируем карточки */ 
+    align-items: center; /* центрируем карточки по горизонтали */
     padding: 0; 
     margin: 0 auto; 
+    width: 100%; /* занимаем всю ширину родителя */
+    box-sizing: border-box;
   } 
+
   .portfolio-item { 
-    min-width: 288px; /* но не шире 288px */ 
+    width: 288px !important; /* фиксированная ширина */ 
     box-sizing: border-box; 
   } 
+
   .portfolio-img-container img { 
     width: 100%; 
     height: auto; 
     display: block; 
   } 
+
   .portfolio-info { 
     text-align: center; 
   } 
+
   .portfolio-item-title, .portfolio-item-text { 
     margin: 4px 0; 
   } 
+
   .portfolio-overlay-text { 
     font-size: 12px; 
     line-height: 1.4; 
   } 
-} 
+}
 
 @media (max-width: 320px) { 
   * { 
