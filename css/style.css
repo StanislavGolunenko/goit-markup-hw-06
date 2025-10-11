@@ -93,7 +93,6 @@ body {
   text-decoration: none;
   color: #2e2f42;
   display: block;
-  
 }
 
 /* Контакти */
@@ -1251,6 +1250,10 @@ h1,h2,h3,h4,h5,h6,p {
     width: 100% !important;                 /* занимают всю ширину ячейки */
     box-sizing: border-box;
   }
+
+  .icon-container {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1573,32 +1576,56 @@ h1,h2,h3,h4,h5,h6,p {
   }
 
 @media screen and (max-width: 320px) {
+  /* Список всех блоков */
   .features-list {
-    display: flex;          /* включаем flex */
+    display: flex;          
     flex-direction: column; /* карточки вертикально */
-    gap: 16px;              /* расстояние между карточками */
+    gap: 72px;              /* расстояние между карточками */
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
+    list-style: none;
+    align-items: center; 
+    width: 100%;  
   }
 
+  /* Каждая карточка */
   .feature-item {
-    width: 288px;           /* фиксированная ширина карточки */
+    width: 288px;           /* фиксированная ширина */
     margin: 0 auto;         /* центрируем по экрану */
     text-align: center;     /* содержимое по центру */
+    box-sizing: border-box; /* учитываем padding и border */
   }
 
+  /* Иконка (если нужна, оставляем) */
   .icon-container {
-    margin-bottom: 8px;     /* отступ снизу иконки */
+    display: none;          /* скрываем иконку, если не нужна */
+    margin-bottom: 8px;     
   }
 
+  /* Заголовок */
   .feature-title {
-    margin-bottom: 4px;
-    font-size: 16px;
+    margin-bottom: 8px;      /* расстояние до текста */
+    font-size: 36px;
+    line-height: 1.2;
   }
 
+  /* Текст */
   .feature-text {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.4;
+    width: 288px;
+    text-align: left;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .features-section {
+    height: 888px;
+    display: flex;
+      flex-direction: column;
   }
 }
 
@@ -1611,8 +1638,7 @@ h1,h2,h3,h4,h5,h6,p {
     display: block;
     margin-left: 69px;        /* отступ слева */
     margin-right: auto;       /* автоматически компенсируем справа */
-    white-space: nowrap;      /* в одну строку */
-    margin-bottom: 24px;      /* отступ снизу */
+    white-space: nowrap; 
   }
 
   /* Сетка карточек */
@@ -1630,32 +1656,39 @@ h1,h2,h3,h4,h5,h6,p {
     width: 100%;              /* занимают всю ширину контейнера с паддингами */
     max-width: 264px;         /* если хотим ограничить ширину карточки */
     box-sizing: border-box;
+    margin-top: 72px;
   }
+
+  .social-list {
+    display: flex;
+    justify-content: center;
+  }
+}
 }
 
 @media screen and (max-width: 320px) {
   .portfolio-list {
     display: flex;
-    flex-direction: column;  /* карточки друг под другом */
-    gap: 16px;               /* расстояние между карточками */
+    flex-direction: column;   /* карточки одна под другой */
+    gap: 48px;                /* расстояние между карточками */
+    align-items: center;      /* центрируем карточки */
     padding: 0;
     margin: 0 auto;
   }
 
   .portfolio-item {
-    width: 288px;            /* фиксированная ширина карточки */
-    max-width: 90%;          /* чтобы не вылезала за экран */
-    margin: 0 auto;          /* центрируем карточку */
-    box-sizing: border-box;  /* учитываем padding и border */
+    min-width: 288px;         /* но не шире 288px */
+    box-sizing: border-box;
   }
 
   .portfolio-img-container img {
-    width: 100%;             /* картинка растягивается на всю ширину карточки */
-    height: auto;            /* сохраняем пропорции */
+    width: 100%;
+    height: auto;
+    display: block;
   }
 
   .portfolio-info {
-    text-align: center;      /* выравниваем текст по центру */
+    text-align: center;
   }
 
   .portfolio-item-title,
@@ -1664,70 +1697,136 @@ h1,h2,h3,h4,h5,h6,p {
   }
 
   .portfolio-overlay-text {
-    font-size: 12px;         /* уменьшаем текст для маленького экрана */
+    font-size: 12px;
     line-height: 1.4;
   }
 }
 
-@media screen and (max-width: 320px) {
-  .footer-flex {
-    display: flex;            /* активируем flex */
-    flex-direction: column;   /* вертикальный порядок блоков */
-    align-items: center;      /* центрируем блоки по горизонтали */
-    gap: 16px;                /* расстояние между блоками */
-    padding: 16px 0;
+
+@media (max-width: 320px) {
+ * {
+    box-sizing: border-box;
   }
 
-  /* Все внутренние блоки футера */
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer {
+    height: 664px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;   /* вертикальное расположение блоков */
+    justify-content: center;  /* центрируем по вертикали */
+    align-items: center;      /* центрируем по горизонтали */
+    text-align: center;
+    padding: 0;               /* убираем лишние отступы */
+  }
+
+  .footer-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* центрируем блоки внутри */
+    width: 100%;              /* занимаем всю ширину контейнера */
+    max-width: 320px;         /* фиксируем максимальную ширину для маленького экрана */
+  }
+
   .footer-info,
   .footer-social,
   .subscribe-container {
-    width: 288px;             /* фиксированная ширина блоков */
-    max-width: 90%;           /* не вылезают за экран */
-    text-align: center;       /* выравниваем текст по центру */
+    display: flex;
+    flex-direction: column;
+    align-items: center;      /* центрируем все элементы внутри блоков */
+    text-align: center;
   }
 
-  /* Логотип по центру */
-  .logo-link {
-    display: inline-block;
-    margin-bottom: 12px;
+  .footer .logo-link  {
+    margin-left: 102px;
   }
 
-  /* Соцсети в ряд, центрируем */
+  .footer-info {
+    margin-top: 0; 
+    margin-right: 16px;           /* первый блок сверху */
+  }
+
+  .footer-social {
+    margin-top: 72px; 
+    margin-left: 56px; 
+    display: flex;  
+    justify-content: center;     /* отступ между блоками */
+  }
+
+  .subscribe-container {
+    margin-top: 72px;         /* отступ между блоками */
+  }
+
+  .paragraf-footer {
+    font-size: 16px;      /* размер текста */
+    margin: 10px 0 0 0;   /* отступ сверху */
+    line-height: 1.4;     /* высота строки для читаемости */
+     text-align: left; 
+    width: 288px;
+    
+  }
+
   .social-list {
     display: flex;
-    justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 0;
-    margin: 0 auto;
     list-style: none;
+    margin-left: -44px;
   }
 
-  /* Форма подписки */
+  .social-title {
+    display: flex;
+    text-align: center;
+    margin-left: -44px;
+  }
+
   .subscribe-form {
     display: flex;
-    flex-direction: column; /* вертикально */
-    align-items: center;
+    flex-direction: column;
     gap: 10px;
+    align-items: center;
+    width: 100%;
   }
 
-  .subscribe-input {
-    width: 100%;            /* поле на всю ширину блока */
-    box-sizing: border-box; /* учитываем padding */
+  .subscribe-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .subscribe-label {
+    width: 288px;
   }
 
   .subscribe-btn {
-    display: flex;
-    align-items: center;     /* текст и иконка по центру вертикали */
-    justify-content: center;
-    gap: 6px;                /* расстояние между текстом и иконкой */
+    width: 165px;
   }
-}
 
 
-@media (max-width: 480px) { /* под смартфоны */
+@media (max-width: 320px) { /* под смартфоны */
   .modal {
-    display: none; /* скрываем модальное окно */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: #fff;
+    padding: 20px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      display: none !important;
   }
+
+  
 }
 }
+
