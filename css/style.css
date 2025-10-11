@@ -1284,9 +1284,11 @@ h1,h2,h3,h4,h5,h6,p {
   .team-list { 
     display: grid; 
     grid-template-columns: repeat(2, auto); /* 2 карточки в ряд */ 
-      column-gap: 24px;  /* горизонтальное расстояние между карточками */
-  row-gap: 64px; 
-    justify-items: start; /* выравниваем карточки по левому краю */ 
+    column-gap: 24px;  /* горизонтальное расстояние между карточками */
+    row-gap: 64px; 
+    justify-items: start;
+    margin-left: -48px;
+    
   } 
   /* Карточки */ 
   .team-item { 
