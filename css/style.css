@@ -96,12 +96,17 @@ body {
 }
 
 /* Контакти */
-.contact-list {
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
-  list-style: none;
+.contact-info .contact-list {
+  display: flex;           /* превращаем список в flex-контейнер */
+  flex-direction: row;     /* элементы идут в ряд */
+   gap: 40px;                 /* расстояние между элементами */
+  padding: 0;              /* убираем внутренние отступы ul */
+  margin: 0;               /* убираем внешние отступы ul */
+  list-style: none; /* убираем маркеры списка */
+   white-space: nowrap;     
 }
+
+
 
 .contact-link {
   font-size: 16px;
@@ -1152,12 +1157,12 @@ h1,h2,h3,h4,h5,h6,p {
     gap: 16px; 
   } 
   /* Контакты справа, email над телефоном */ 
-  .contact-list { 
-    display: flex; 
-    flex-direction: column; 
-    text-align: right; 
-    gap: 4px; 
-  } 
+  .contact-list {
+    flex-direction: column !important;   /* вертикальный стек */
+    gap: 12px !important;                /* расстояние между контактами */
+    align-items: flex-end;    /* выравнивание по правому краю */
+  }
+
   .hero-title { 
     font-size: 36px; 
     max-width: 90%; 
@@ -1224,7 +1229,7 @@ h1,h2,h3,h4,h5,h6,p {
   .features-list { 
     display: grid !important; /* отменяем flex */ 
     grid-template-columns: repeat(2, 1fr); /* 2 карточки в ряд */ 
-    gap: 24px; 
+    gap: 72px; 
     width: 100%; /* чтобы занимать всю ширину контейнера */ 
     justify-items: center; /* центрируем карточки внутри ячеек */ 
   } 
@@ -1236,6 +1241,14 @@ h1,h2,h3,h4,h5,h6,p {
   .icon-container { 
     display: none; 
   } 
+
+  .feature-title {
+    font-size: 36px;
+  }
+
+  .feature-text {
+    font-size: 16px;
+  }
 } 
 
 @media (max-width: 768px) { 
@@ -1271,7 +1284,8 @@ h1,h2,h3,h4,h5,h6,p {
   .team-list { 
     display: grid; 
     grid-template-columns: repeat(2, auto); /* 2 карточки в ряд */ 
-    gap: 24px; 
+      column-gap: 24px;  /* горизонтальное расстояние между карточками */
+  row-gap: 64px; 
     justify-items: start; /* выравниваем карточки по левому краю */ 
   } 
   /* Карточки */ 
@@ -1293,12 +1307,13 @@ h1,h2,h3,h4,h5,h6,p {
     display: flex; 
     flex-wrap: wrap; 
     justify-content: center; /* центрируем все карточки */ 
-    gap: 24px; 
+    column-gap: 24px;  /* горизонтальное расстояние между карточками */
+  row-gap: 64px; 
   } 
   /* Каждая карточка остаётся без изменений */ 
   .portfolio-item { 
     flex: 0 1 48%; /* 2 карточки в ряд */ 
-    max-width: 48%; 
+    width: 356px;
     box-sizing: border-box; 
   } 
 } 
