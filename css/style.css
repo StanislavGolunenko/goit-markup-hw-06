@@ -1524,16 +1524,16 @@ h1,h2,h3,h4,h5,h6,p {
 
   @media screen and (max-width: 320px) { 
     /* Список всех блоков */ 
-    .features-list { 
-      display: flex; 
-      flex-direction: column; /* карточки вертикально */ 
-      gap: 72px; /* расстояние между карточками */ 
-      padding: 0; 
-      margin: 0 auto; 
-      list-style: none; 
-      align-items: center; 
-      width: 100%; 
-    } 
+.features-list {
+    display: flex !important;      /* точно flex */
+    flex-direction: column !important; /* строго вертикально */
+    gap: 72px;                     /* расстояние между блоками */
+    align-items: center;           /* центрирование по горизонтали */
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+  } 
     /* Каждая карточка */ 
     .feature-item { 
       width: 288px; /* фиксированная ширина */ 
