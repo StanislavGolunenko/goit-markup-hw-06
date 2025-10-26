@@ -2,7 +2,7 @@
 
 .mobile-menu-toggle,
 .mobile-menu {
-  display: none;
+  display: none !important; 
 }
 
 
@@ -1480,6 +1480,7 @@ h1,h2,h3,h4,h5,h6,p {
     width: 100%; 
   } 
 
+
   /* Логотип */ 
   .logo-link { 
     display: inline-block; 
@@ -1513,6 +1514,7 @@ h1,h2,h3,h4,h5,h6,p {
   } 
 } 
 
+
 .burger-menu span:nth-child(1) { top: 0; } 
 .burger-menu span:nth-child(2) { top: 7.5px; } 
 .burger-menu span:nth-child(3) { top: 15px; } 
@@ -1531,6 +1533,8 @@ h1,h2,h3,h4,h5,h6,p {
   margin: 0 auto; 
   list-style: none; 
 } 
+
+
 
 @media (max-width: 320px) { 
   /* Контейнер секции */ 
@@ -1553,15 +1557,46 @@ h1,h2,h3,h4,h5,h6,p {
     box-sizing: border-box; 
   } 
 
-  .hero-button {
-    margin-top: 72px;
-  }
-
   .social-list {
     display: flex;
     justify-content: space-around;
   }
 
+/* Мобильная версия 320px */
+@media (max-width: 320px) {
+
+  .hero-section {
+    width: 320px;
+    height: 432px;
+    margin: 0 auto;
+      padding-top: 72px;
+    padding-bottom: 72px;
+    box-sizing: border-box;
+  }
+
+    .hero-section .container1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* центрируем по горизонтали */
+    
+    }
+
+  .hero-title {
+    text-align: center;
+    margin-bottom: 72px; /* расстояние между текстом и кнопкой */
+  }
+
+ .hero-button {
+    padding: 12px 24px;
+    background-color: #4d5ae5;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+}
+  
   @media screen and (max-width: 320px) { 
     /* Список всех блоков */ 
 .features-list {
@@ -1756,6 +1791,7 @@ color: #434455;
     display: flex; 
     text-align: center; 
     margin: 0 auto;
+    margin-top: 72px;
   } 
   .subscribe-form { 
     display: flex; 
@@ -1829,7 +1865,7 @@ color: #434455;
     height: 24px;
     cursor: pointer;
     z-index: 1001;       /* выше остальных элементов */
-    border: 1px solid #000; /* для визуальной проверки */
+    border: 1px solid #c4c4c4; /* для визуальной проверки */
   }
 
   .mobile-menu-container svg {
@@ -1843,6 +1879,8 @@ color: #434455;
     position: relative;
   }
 }
+
+
 }
 
 
