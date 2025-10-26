@@ -1658,13 +1658,29 @@ h1,h2,h3,h4,h5,h6,p {
     display: block; 
   } 
 
-  .portfolio-info { 
-    text-align: center; 
-  } 
 
-  .portfolio-item-title, .portfolio-item-text { 
-    margin: 4px 0; 
-  } 
+.portfolio-info {
+  text-align: left;     /* текст по левому краю */
+  padding-left: 16px;   /* отступ слева */
+}
+
+.portfolio-item-title {
+  margin: 0 0 8px 0;    /* отступ снизу, чтобы p был ниже */
+  font-weight: 500;
+font-size: 20px;
+line-height: 120%;
+letter-spacing: 0.02em;
+color: #2e2f42;
+}
+
+.portfolio-item-text {
+  margin: 0;            /* обнуляем стандартные отступы браузера */
+  font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: 0.02em;
+color: #434455;
+}
 
   .portfolio-overlay-text { 
     font-size: 12px; 
@@ -1791,9 +1807,6 @@ h1,h2,h3,h4,h5,h6,p {
   .modal-title {
     margin-top: 72px;
   }
-
-
- 
   }
 }
 
