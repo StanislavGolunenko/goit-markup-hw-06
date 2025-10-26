@@ -1,5 +1,13 @@
 /* Body */
 
+.mobile-menu-toggle,
+.mobile-menu {
+  display: none;
+}
+
+
+
+
 body {
   font-family: "Roboto", sans-serif;
   color: #434455;
@@ -1808,6 +1816,33 @@ color: #434455;
     margin-top: 72px;
   }
   }
+
+
+
+@media (max-width: 320px) {
+  .mobile-menu-container {
+    display: block;
+    position: absolute;  /* позиционирование относительно header */
+    top: 16px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 1001;       /* выше остальных элементов */
+    border: 1px solid #000; /* для визуальной проверки */
+  }
+
+  .mobile-menu-container svg {
+    width: 100%;
+    height: 100%;
+    fill: #000;           /* цвет иконки */
+  }
+
+  /* Добавляем position: relative для родителя */
+  .header-container {
+    position: relative;
+  }
+}
 }
 
 
