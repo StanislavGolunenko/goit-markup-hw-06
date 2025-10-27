@@ -1,11 +1,5 @@
 /* Body */
 
-.mobile-menu-toggle,
-.mobile-menu {
-  display: none !important; 
-}
-
-
 
 
 body {
@@ -1146,6 +1140,9 @@ h1,h2,h3,h4,h5,h6,p {
 
 /* ====== Планшетная версия до 768px ====== */
 @media (max-width: 768px) { 
+
+
+
   /* Хедер */ 
   .header-container { 
     display: flex; 
@@ -1906,6 +1903,17 @@ color: #434455;
   transform: translateX(0);
 }
 }
+
+}
+
+/* Скрываем на планшетах и десктопе */
+@media screen and (min-width: 768px) {
+  .menu-button,
+  .mobile-menu {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
 }
 
 
