@@ -921,6 +921,7 @@ h1,h2,h3,h4,h5,h6,p {
   background-color: #404bbf;
   border: none;
 }
+
 .modal-close:hover .modal-close-icon,
 .modal-close:focus .modal-close-icon {
   fill: #ffffff;
@@ -1118,7 +1119,7 @@ h1,h2,h3,h4,h5,h6,p {
 
 .modal-form input,
 .modal-form textarea {
-  width: 100%;
+  width: 360px;
   box-sizing: border-box;
 }
 
@@ -1834,6 +1835,12 @@ color: #434455;
     top: 28px;
     right: 24px;
   }
+
+  .modal-form input,
+.modal-form textarea {
+  width: 256px;
+  box-sizing: border-box;
+}
 
   .checkbox-custom1 br {
     display: flex;
