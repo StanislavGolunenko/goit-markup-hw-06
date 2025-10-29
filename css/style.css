@@ -1853,57 +1853,128 @@ color: #434455;
 
 
 @media (max-width: 320px) {
-  .mobile-menu-container {
-    display: block;
-    position: absolute;  /* позиционирование относительно header */
-    top: 16px;
-    right: 16px;
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-    z-index: 1001;       /* выше остальных элементов */
-    border: 1px solid #c4c4c4; /* для визуальной проверки */
-  }
-
-  .mobile-menu-container svg {
-    width: 100%;
-    height: 100%;
-    fill: #000;           /* цвет иконки */
-  }
-
-  /* Добавляем position: relative для родителя */
-  .header-container {
-    position: relative;
-  }
-}
-
-@media (max-width: 320px) {
   .mobile-menu {
     position: fixed;
     top: 0;
     left: 0;
-
     width: 100%;
     height: 100%;
     background: #ddd;
-     transform: translateX(100%);
-   
-
+    transform: translateX(100%);
     transition: 400ms ease-in;
+    z-index: 1000;
+  }
+
+  .mobile-menu.is-open {
+    transform: translateX(0);
   }
 
   .mobile-menu .container2 {
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 72px 16px 48px;
+    
   }
 
-  .mobile-menu.is-open {
-  transform: translateX(0);
-}
-}
+  .mobile-menu-container {
+    display: block;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 1001;
+  }
 
+  .mobile-menu-container svg {
+    width: 100%;
+    height: 100%;
+    fill: #000;
+  }
+
+  .header-container {
+    position: relative;
+  }
+
+  .mobile-menu-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    list-style: none;
+    margin-top: 72px;
+    padding: 0;
+  }
+
+  .mobile-menu-link {
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 111%;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    margin-left: 16px;
+  }
+
+  .mobile-menu-nav li:first-child .mobile-menu-link {
+    color: #404bbf;
+  }
+
+  .mobile-menu-nav li:nth-child(2) .mobile-menu-link,
+  .mobile-menu-nav li:nth-child(3) .mobile-menu-link {
+    color: #2e2f42;
+  }
+
+  .mobile-menu-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-left: 16px;
+    margin-top: 168px;
+    margin-bottom: 128px;
+    list-style: none;
+  }
+
+  .mobile-menu-contacts .mobile-menu-link {
+    font-family: var(--third-family);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+  }
+
+  .mobile-menu-contacts li:first-child .mobile-menu-link {
+    color: #4d5ae5;
+  }
+
+  .mobile-menu-contacts li:last-child .mobile-menu-link {
+    color: #434455;
+  }
+
+   .mobile-menu-btn {
+    position: absolute;       /* позиционируем относительно container2 */             /* отступ справа */
+    width: 24px;              /* рекомендуемый размер кнопки, можно менять */
+    height: 24px;
+    border-radius: 100%;      /* круглая кнопка */
+    background-color: #e7e9fc; /* фон кнопки */
+    border: 1px solid #2e2f42; /* обводка */
+    display: flex;
+    padding: 0;
+    cursor: pointer;
+    z-index: 1002;            /* выше меню */
+    margin-top: 24px;
+    margin-right: 24px !important;
+  }
+
+  .mobile-menu-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: none;               /* чтобы был виден stroke */
+    stroke: #2e2f42;
+    stroke-width: 1px;
+  }
+}
 }
 
 /* Скрываем на планшетах и десктопе */
