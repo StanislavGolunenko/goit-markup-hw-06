@@ -3,16 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>WebStudio</title>
 
-  <link rel="stylesheet" href="css/modern-normalize.min.css">
+  <!-- Modern Normalize (CDN) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+  >
 
-  <link rel="stylesheet" href="./css/styles.css">
-
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Main styles -->
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
 
@@ -34,29 +42,23 @@
       </ul>
     </nav>
 
-    <!-- Кнопка мобильного меню (гамбургер) -->
-<div class="mobile-menu-container">
-  <svg width="24" height="24" viewBox="0 0 24 24">
-    <use href="./images/man-menu.svg#icon-heroicons-solid_menu"></use>
-  </svg>
-</div>
 
-<!-- Мобильное всплывающее меню -->
-<div class="mobile-menu">
-  <ul>
-    <li><a href="./index.html" class="nav-link">Studio</a></li>
-    <li><a href="" class="nav-link">Portfolio</a></li>
-    <li><a href="" class="nav-link">Contacts</a></li>
+
+   <!-- Контакти -->
+<address class="contact-info">
+  <ul class="contact-list">
+    <li>
+      <a href="mailto:info@devstudio.com" class="contact-link">
+        info@devstudio.com
+      </a>
+    </li>
+    <li>
+      <a href="tel:+110001111111" class="contact-link">
+        +11 (000) 111-11-11
+      </a>
+    </li>
   </ul>
-</div>
-
-    <!-- Контакти -->
-    <address class="contact-info">
-      <ul class="contact-list">
-        <li><a href="mailto:info@example.com" class="contact-link">info@devstudio.com</a></li>
-        <li><a href="tel:+123456789" class="contact-link">+11 (000) 111-11-11</a></li>
-      </ul>
-    </address>
+</address>
   </div>
 </header>
 
@@ -221,8 +223,8 @@
       <li class="team-item team-item-first">
         <img src="./images/img-1.jpg" alt="Meditation App" width="264">
         <div class="team-info">
-          <h3 class="team-name">Meditation App</h3>
-          <p class="team-role">App</p>
+          <h3 class="team-name">Camila Garcia</h3>
+          <p class="team-role">Marketing</p>
 
           <!-- список соцсетей -->
           <ul class="social-list">
@@ -262,8 +264,8 @@
       <li class="team-item team-item-first">
         <img src="./images/img.jpg" alt="Taxi Service" width="264">
         <div class="team-info">
-          <h3 class="team-name">Taxi Service</h3>
-          <p class="team-role">Marketing</p>
+          <h3 class="team-name">Daniel Wilson</h3>
+          <p class="team-role">UI Designer</p>
 
        
           <ul class="social-list">
@@ -393,11 +395,11 @@
       <a href="./index.html" class="logo-link">
         Web<span class="logo-studio">Studio</span>
       </a>
-      <p class="paragraf-footer">
-        Increase the flow of customers and <br>
-        sales for your business with digital <br>
-        marketing & growth solutions.
-      </p>
+ <p class="paragraf-footer">
+  <span>Increase the flow of customers and sales</span>
+  <span>for your business with digital marketing</span>
+  <span>& growth solutions.</span>
+</p>
     </div>
 
     <!-- блок: соцсети -->
@@ -456,6 +458,8 @@
     </div>
   </div>
 </footer>
+
+
 
 <!-- Backdrop -->
 <div class="modal-backdrop">
@@ -602,28 +606,28 @@
       <li>
         <a href="#" class="social-link">
           <svg width="24" height="24">
-            <use href="./images/icons.svg.svg#icon-instagram-2"></use>
+            <use href="./images/icons.svg#icon-instagram-2"></use>
           </svg>
         </a>
       </li>
       <li>
         <a href="#" class="social-link">
           <svg width="24" height="24">
-            <use href="./images/icons.svg.svg#icon-Twitter"></use>
+            <use href="./images/icons.svg#icon-Twitter"></use>
           </svg>
         </a>
       </li>
       <li>
         <a href="#" class="social-link">
           <svg width="24" height="24">
-            <use href="./images/icons.svg.svg#icon-Vector"></use>
+            <use href="./images/icons.svg#icon-Vector"></use>
           </svg>
         </a>
       </li>
       <li>
         <a href="#" class="social-link">
           <svg width="24" height="24">
-            <use href="./images/icons.svg.svg#icon-linkedin-1"></use>
+            <use href="./images/icons.svg#icon-linkedin-1"></use>
           </svg>
         </a>
       </li>

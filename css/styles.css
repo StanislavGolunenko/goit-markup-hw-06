@@ -58,9 +58,11 @@ body {
 }
 
 .container {
-  width: 1440px;
-  margin: 0 auto;
-  padding: 0 15px;
+  width: 100%;         /* на мобільних займає всю ширину */
+  max-width: 1440px;   /* не більше 1440px на великих екранах */
+  margin: 0 auto;      /* центрування */
+  padding: 0 15px;     /* внутрішні відступи від країв */
+  box-sizing: border-box; /* щоб padding не збільшував ширину */
 }
 
 /* Навігація */
@@ -354,7 +356,6 @@ button {
   color: #434455;
   line-height: 1.5;
 }
-
 
 
 .team-section {
@@ -863,6 +864,7 @@ h1,h2,h3,h4,h5,h6,p {
 
 
 
+
 /* backdrop */
 /* Фон */
 .modal-backdrop {
@@ -875,6 +877,10 @@ h1,h2,h3,h4,h5,h6,p {
   z-index: 1000; /* ниже окна */
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
               visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  opacity: 1;          /* зробити видимим */
+  visibility: visible;  /* показати */
+  pointer-events: auto; /* дозволити кліки */
 }
 
 /* Модальное окно */
@@ -1146,10 +1152,7 @@ h1,h2,h3,h4,h5,h6,p {
 
 
 /* ====== Планшетная версия до 768px ====== */
-@media (max-width: 768px) { 
-
-
-
+@media (max-width: 768px) {
   /* Хедер */ 
   .header-container { 
     display: flex; 
@@ -1237,6 +1240,7 @@ h1,h2,h3,h4,h5,h6,p {
     padding: 0 16px; /* отступы слева и справа */ 
     box-sizing: border-box; /* чтобы padding учитывался */ 
   } 
+
   /* Контейнер списка фич */ 
   .features-list { 
     display: grid !important; /* отменяем flex */ 
@@ -1245,6 +1249,7 @@ h1,h2,h3,h4,h5,h6,p {
     width: 100%; /* чтобы занимать всю ширину контейнера */ 
     justify-items: center; /* центрируем карточки внутри ячеек */ 
   } 
+
   /* Карточки */ 
   .feature-item { 
     width: 100% !important; /* занимают всю ширину ячейки */ 
@@ -1262,6 +1267,7 @@ h1,h2,h3,h4,h5,h6,p {
   .feature-text {
     font-size: 16px;
   }
+
 } 
 
 @media (max-width: 768px) { 
