@@ -1679,6 +1679,14 @@ margin-bottom: 8px;
     margin-top: -4px;
   }
 
+  .input-icon {
+  position: absolute;
+  left: 19px;          /* ← РОВНО 19px */
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* чтобы клик шел в input */
+}
+
 .checkbox-custom {
   width: 16px;
   height: 16px;
@@ -1864,6 +1872,7 @@ opacity: 0.5;
 
 .input-wrap {
   position: relative;
+  margin-bottom: 8px;
 }
 
 .form-input {
@@ -1919,6 +1928,8 @@ opacity: 0.5;
 .form-textarea:focus {
   border-color: #4d5ae5;
 }
+
+
 
 /* чекбокс */
 .form-checkbox {
