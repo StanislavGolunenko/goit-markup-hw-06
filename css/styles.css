@@ -669,10 +669,7 @@ color: #2e2f42;
   fill: #fff;
 }
 
-.social-icon use {
-  transform: scale(2); /* увеличивает содержимое */
-  transform-origin: center center;
-}
+
 
 
 
