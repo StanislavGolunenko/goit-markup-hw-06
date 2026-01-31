@@ -1565,12 +1565,14 @@ display: none;
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    padding: 16px 0;
   }
 
   /* ===== Modal window ===== */
   .modal-window {
     width: 288px;
-    height: 623px;
+    min-height: 623px;
+     max-height: calc(100vh - 32px);
     background-color: #fcfcfc;
     border-radius: 4px;
     padding: 24px 16px; /* сверху/снизу 24px, слева/справа 16px */
@@ -1579,7 +1581,7 @@ display: none;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
+    overflow-y: auto;
   }
 
   /* ===== Close button ===== */
@@ -1618,7 +1620,7 @@ display: none;
     flex-direction: column;
     align-items: center;
     width: 256px;
-    height: 575px;
+  
   }
 
 /* кнопка submit */
@@ -1784,6 +1786,7 @@ opacity: 0.5;
   flex-direction: column; 
   align-items: center;   
   justify-content: center; 
+  padding-left: 24px;
 }
 
 
