@@ -2155,6 +2155,7 @@ opacity: 0.5;
 
 .input-wrap {
   position: relative;
+  margin-bottom: 8px;
 }
 
 .form-input {
