@@ -382,11 +382,13 @@ margin-left: 300px;
   }
 
 .hero-title {
-  max-width: 496px;     /* вместо width */
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+  font-family: var(--third-family);
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 107%;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin: 0 0 24px 0; /* отступ снизу для кнопки */
 }
 
 .hero-button {
@@ -514,16 +516,16 @@ margin-left: 300px;
 @media screen and (min-width: 1158px) {
 .features-section {
   width: 1440px;
-  min-height: 464px;        /* фиксированная высота */
+  min-height: 464px;       
   padding: 120px 156px; 
   margin: 0 auto;
   box-sizing: border-box;
   }
 
-  .container-features {
-    max-width: 1128px;
-
-  }
+.container.features {
+  max-width: calc(100% - 312px); /* 156px слева + 156px справа */
+  margin: 0 auto;                /* центрирование */
+}
 
  .features-list {
     display: grid;            
@@ -1054,35 +1056,35 @@ display: none;
 
 .portfolio-img-container {
   position: relative;
+  display: inline-block;
+  width: 360px; /* ширина картинки */
+  height: auto;
   overflow: hidden;
+}
+
+/* Overlay скрыт по умолчанию */
+
+
+/* Текст на overlay */
+.portfolio-overlay-text {
+  color: #ffffff;   /* белый текст */
+  font-size: 14px;
+  line-height: 1.4;
+  z-index: 3;       /* выше синего фона */
 }
 
 .portfolio-img-container img {
   display: block;
 }
 
+/* Текст внутри overlay */
 .portfolio-overlay-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-
-  background-color: #4d5ae5;
-  color: #ffffff;
-
-  padding: 40px 32px;
-  box-sizing: border-box;
-
-  transform: translateY(100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  font-size: 16px;
-  line-height: 1.5;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
 }
 
-.portfolio-item:hover .portfolio-overlay-text {
+.portfolio-img-container:hover .portfolio-overlay {
   transform: translateY(0);
 }
 
@@ -2439,7 +2441,7 @@ color: #8e8f99;
 
   .mobile-menu-btn {
     position: absolute;
-    top: -12px;
+    top: 24px;
     right: 24px;
     width: 24px;
     height: 24px;
@@ -2454,6 +2456,8 @@ color: #8e8f99;
 fill: #e7e9fc;
 stroke-width: 1px;
 stroke: #8c8c8e;
+margin-top: 48px;
+margin-bottom: 24px;
 
   }
 
@@ -2496,6 +2500,171 @@ stroke: #8c8c8e;
     height: 20px;
     fill: #f4f4fd;
   }
+
+
+
+  /* Смартфон Mobile Menu */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;            /* меню растягивается на всю высоту экрана */
+    background: #fff;
+    transform: translateX(100%);
+    transition: 400ms ease-in;
+    z-index: 9999;
+    overflow-y: auto;          /* если контента слишком много — появляется прокрутка */
+  }
+
+  .mobile-menu.is-open {
+    transform: translateX(0);
+  }
+
+ .mobile-menu .container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  padding: 72px 16px 40px;     /* отступ сверху 72px, как нужно */
+  box-sizing: border-box;
+}
+
+  .mobile-menu-container {
+    display: block;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .mobile-menu-container svg {
+    width: 100%;
+    height: 100%;
+    fill: #000;
+  }
+
+  .header-container {
+    position: relative;
+  }
+
+.mobile-menu-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* отступы между Studio / Portfolio / Contacts */
+  list-style: none;
+  padding: 0;
+  margin-top: 24px;
+}
+
+  .mobile-menu-link {
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 111%;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+  }
+
+  .mobile-menu-nav li:first-child .mobile-menu-link {
+    color: #404bbf;
+  }
+
+  .mobile-menu-nav li:nth-child(2) .mobile-menu-link,
+  .mobile-menu-nav li:nth-child(3) .mobile-menu-link {
+    color: #2e2f42;
+  }
+
+  .mobile-menu-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 168px;
+    list-style: none;
+  }
+
+  .mobile-menu-contacts .mobile-menu-link {
+    font-family: var(--third-family);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+  }
+
+  .mobile-menu-contacts li:first-child .mobile-menu-link {
+    color: #4d5ae5;
+  }
+
+  .mobile-menu-contacts li:last-child .mobile-menu-link {
+    color: #434455;
+  }
+
+  .mobile-menu-btn {
+    position: absolute;
+    top: -12px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    background-color: #e7e9fc;
+    border: 1px solid #2e2f42;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1002;
+fill: #e7e9fc;
+stroke-width: 1px;
+stroke: #8c8c8e;
+  }
+
+  .mobile-menu-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: #2e2f42;
+    stroke-width: 1px;
+  }
+
+.social-networks {
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+    margin-top: 48px;   /* 🔹 расстояние от почты до соцсетей */
+    margin-bottom: 40px; /* от нижнего края окна */
+    list-style: none;
+  }
+
+  .social-networks li {
+    margin: 0;
+  }
+
+
+  .social-networks .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4d5ae5;
+  }
+
+
+ 
+  .social-networks .social-link svg {
+    width: 20px;
+    height: 20px;
+    fill: #f4f4fd;
+  }
+
+
+
+
 
 
 
