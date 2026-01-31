@@ -1679,13 +1679,7 @@ margin-bottom: 8px;
     margin-top: -4px;
   }
 
-  .input-icon {
-  position: absolute;
-  left: 19px;          /* ← РОВНО 19px */
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none; /* чтобы клик шел в input */
-}
+  
 
 .checkbox-custom {
   width: 16px;
