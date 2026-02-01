@@ -248,6 +248,47 @@ letter-spacing: 0.03em;
 text-transform: uppercase;
 color: #2e2f42 !important;
 }
+
+.nav-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  font-weight: 500;
+  color: #2e2f42;
+  text-decoration: none;
+
+}
+
+.nav__link_nav__link--active {
+  position: relative;
+  display: inline-block;
+  padding: 24px 0;
+}
+
+.nav__link_nav__link--active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 4px;
+  background: #404bbf;
+  border-radius: 2px;
+}
+
+.nav-link:hover::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 48px;
+  height: 4px;
+  background: #404bbf;
+  border-radius: 2px;
+}
 }
 
 
@@ -278,11 +319,30 @@ color: #2e2f42 !important;
     height: 288px;
     }
 
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* фон за контентом */
+}
+
+.hero-bg picture,
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* изображение покрывает всю секцию */
+  display: block;    /* убираем inline-block поведение img */
+}
+
   .hero-title {
     text-align: center;
     margin-bottom: 72px; /* расстояние между текстом и кнопкой */
     color: #fff;
   }
+
+ 
 
  .hero-button {
     padding: 12px 24px;
