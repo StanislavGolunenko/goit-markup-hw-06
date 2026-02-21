@@ -1632,6 +1632,9 @@ display: none;
     align-items: center;
     z-index: 1000;
     padding: 16px 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 
   /* ===== Modal window ===== */
@@ -1648,7 +1651,16 @@ display: none;
     flex-direction: column;
     align-items: center;
     overflow-y: auto;
+    
   }
+
+  .modal-backdrop.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+
 
   /* ===== Close button ===== */
   .modal-close {
