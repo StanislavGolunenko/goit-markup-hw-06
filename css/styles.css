@@ -108,7 +108,7 @@ margin: -1px;
 font-family: var(--font7);
 font-weight: 700;
 font-size: 18px;
-line-height: 117%;
+line-height: 1.17;
 letter-spacing: 0.03em;
 text-transform: uppercase;
 color: #4d5ae5;
@@ -121,7 +121,7 @@ padding: 16px 0;
 font-family: var(--font7);
 font-weight: 700;
 font-size: 18px;
-line-height: 117%;
+line-height: 1.17;
 letter-spacing: 0.03em;
 text-transform: uppercase;
 color: #2e2f42;
@@ -175,7 +175,7 @@ color: #2e2f42;
     font-family: var(--third-family);
 font-weight: 500;
 font-size: 16px;
-line-height: 150%;
+line-height: 1.15;
 letter-spacing: 0.02em;
 color: #404bbf;
 }
@@ -184,14 +184,14 @@ color: #404bbf;
     font-family: var(--third-family);
 font-weight: 500;
 font-size: 16px;
-line-height: 150%;
+line-height: 1.15;
 letter-spacing: 0.02em;
 color: #2e2f42;
 }
 
 .contact-list {
 font-size: 12px;
-line-height: 117%;
+line-height: 1.17;
 letter-spacing: 0.04em;
 color: #434455;
 display: flex;
@@ -205,7 +205,7 @@ color: #434455;
 
   .logo-studio {
 font-size: 18px;
-line-height: 117%;
+line-height: 1.17;
 letter-spacing: 0.03em;
 text-transform: uppercase;
 color: #2e2f42;
@@ -218,7 +218,7 @@ color: #2e2f42;
    @media screen and (min-width: 1158px) {
    .contact-list {
 font-size: 12px;
-line-height: 117%;
+line-height: 1.17;
 letter-spacing: 0.04em;
 color: #434455;
 display: flex;
@@ -231,7 +231,7 @@ gap: 40px;
     font-family: var(--third-family);
 font-weight: 400;
 font-size: 16px;
-line-height: 150%;
+line-height: 1.15;
 letter-spacing: 0.02em;
 color: #434455;
 }
@@ -244,7 +244,7 @@ color: #434455;
   font-family: var(--font7);
 font-weight: 700;
 font-size: 18px;
-line-height: 117%;
+line-height: 1.17;
 letter-spacing: 0.03em;
 text-transform: uppercase;
 color: #2e2f42 !important;
@@ -390,7 +390,7 @@ color: #2e2f42 !important;
     font-family: var(--third-family);
 font-weight: 700;
 font-size: 56px;
-line-height: 107%;
+ line-height: 1.07;
 letter-spacing: 0.02em;
 text-align: center;
 margin: 0 auto;
@@ -447,7 +447,7 @@ margin-left: 300px;
   font-family: var(--third-family);
   font-weight: 700;
   font-size: 56px;
-  line-height: 107%;
+  line-height: 1.07;
   letter-spacing: 0.02em;
   color: #fff;
   margin: 0 0 24px 0; /* отступ снизу для кнопки */
@@ -546,7 +546,7 @@ margin-left: 300px;
 
   /* Контейнер списка фич */ 
   .features-list { 
-    display: grid !important; /* отменяем flex */ 
+    display: grid; /* отменяем flex */ 
     grid-template-columns: repeat(2, 1fr); /* 2 карточки в ряд */ 
     gap: 72px; 
     width: 100%; /* чтобы занимать всю ширину контейнера */ 
@@ -555,7 +555,7 @@ margin-left: 300px;
 
   /* Карточки */ 
   .feature-item { 
-    width: 100% !important; /* занимают всю ширину ячейки */ 
+    width: 100%; /* занимают всю ширину ячейки */ 
     box-sizing: border-box; 
   } 
 
@@ -696,7 +696,7 @@ margin-left: 300px;
   font-family: var(--third-family);
 font-weight: 700;
 font-size: 36px;
-line-height: 111%;
+line-height: 1.11;
 letter-spacing: 0.02em;
 text-align: center;
 color: #2e2f42;
@@ -951,7 +951,7 @@ background: #fff;
 font-family: var(--third-family);
 font-weight: 500;
 font-size: 20px;
-line-height: 120%;
+line-height: 1.2;
 letter-spacing: 0.02em;
 color: #2e2f42;
 margin-top: 32px;
@@ -962,7 +962,7 @@ margin-left: 16px;
 font-family: var(--third-family);
 font-weight: 400;
 font-size: 16px;
-line-height: 150%;
+line-height: 1.5;
 letter-spacing: 0.02em;
 color: #434455;
 margin-top: 8px;
@@ -1016,7 +1016,7 @@ display: none;
   font-family: var(--third-family);
   font-weight: 500;
   font-size: 20px;
-  line-height: 120%;
+  line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
   margin: 0 0 8px 0; /* только отступ снизу между заголовком и текстом */
@@ -1026,7 +1026,7 @@ display: none;
   font-family: var(--third-family);
   font-weight: 400;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: #434455;
   margin: 0; /* убираем все внешние отступы */
@@ -1100,7 +1100,7 @@ display: none;
     font-family: var(--third-family);
     font-weight: 500;
     font-size: 20px;
-    line-height: 120%;
+    line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
     margin: 0 0 8px 0; /* только отступ снизу между заголовком и текстом */
@@ -1110,7 +1110,7 @@ display: none;
     font-family: var(--third-family);
     font-weight: 400;
     font-size: 16px;
-    line-height: 150%;
+    line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
     margin: 0; /* без внешних отступов */
@@ -1194,7 +1194,7 @@ display: none;
   font-family: var(--font7);
   font-weight: 700;
   font-size: 18px;
-  line-height: 117%;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #4d5ae5;
@@ -1204,7 +1204,7 @@ display: none;
   font-family: var(--font7);
   font-weight: 700;
   font-size: 18px;
-  line-height: 117%;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #f4f4fd;
@@ -1235,7 +1235,7 @@ display: none;
   font-family: var(--third-family);
   font-weight: 500;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
   margin-bottom: 16px;
@@ -1279,7 +1279,7 @@ display: none;
   font-family: var(--third-family);
   font-weight: 500;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
   margin-bottom: 16px;
@@ -1302,7 +1302,7 @@ display: none;
   background-color: transparent;   /* прозрачный фон */
   padding: 0 12px;
   font-size: 16px;
-   color: #fff;     
+  color: #fff;     
   box-sizing: border-box;
 }
 
@@ -1454,7 +1454,7 @@ display: none;
   font-family: var(--third-family);
   font-weight: 500;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
   margin-left: 24px;
@@ -1642,7 +1642,7 @@ display: none;
   .modal-window {
     width: 288px;
     min-height: 623px;
-     max-height: calc(100vh - 32px);
+    max-height: calc(100vh - 32px);
     background-color: #fcfcfc;
     border-radius: 4px;
     padding: 24px 16px; /* сверху/снизу 24px, слева/справа 16px */
@@ -1699,7 +1699,6 @@ display: none;
     flex-direction: column;
     align-items: center;
     width: 256px;
-  
   }
 
 /* кнопка submit */
@@ -1737,7 +1736,7 @@ display: none;
 
   /* ===== Input ===== */
   .form-input {
-  border: 1px solid rgba(46, 47, 66, 0.4);
+border: 1px solid rgba(46, 47, 66, 0.4);
 border-radius: 4px;
 width: 256px;
 height: 40px;
@@ -1771,15 +1770,15 @@ margin-bottom: 8px;
 }
 
 .checkbox-custom1  {
-  font-family: var(--third-family);
+font-family: var(--third-family);
 font-weight: 400;
 font-size: 12px;
 line-height: 117%;
 letter-spacing: 0.04em;
 color: #8e8f99;
-  display: block;
-  text-align: left;
-  margin-top: 16px;
+display: block;
+text-align: left;
+margin-top: 16px;
 }
 
 .checkbox-link {
@@ -1805,14 +1804,14 @@ color: #8e8f99;
     resize: none;
     outline: none;
     width: 256px;
-height: 120px;
+    height: 120px;
   }
 
   .form-textarea::placeholder {
 font-family: var(--third-family);
 font-weight: 400;
 font-size: 12px;
-line-height: 117%;
+line-height: 1.17;
 letter-spacing: 0.04em;
 color: #8e8f99;
 opacity: 0.5;
@@ -1916,7 +1915,7 @@ opacity: 0.5;
 .modal-title {
   font-weight: 500;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.02em;
   text-align: center;
@@ -2142,7 +2141,7 @@ opacity: 0.5;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
               visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-   opacity: 0;          /* скрыт по умолчанию */
+  opacity: 0;          /* скрыт по умолчанию */
   visibility: hidden;  /* не интерактивен */
   pointer-events: none; /* клики не проходят */
 }
@@ -2194,7 +2193,6 @@ opacity: 0.5;
   background-color: #ffffff;
   cursor: pointer;
   margin-top: 8px;
-  
 }
 
 .modal-close:hover,
@@ -2217,7 +2215,7 @@ opacity: 0.5;
 .modal-title {
   font-weight: 500;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.02em;
   text-align: center;
@@ -2370,8 +2368,8 @@ opacity: 0.5;
   border-radius: 4px;
   margin: 0 auto;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-   margin-bottom: 24px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  margin-bottom: 24px;
 }
 
 .modal-submit:hover,
@@ -2484,7 +2482,7 @@ opacity: 0.5;
     font-family: var(--third-family);
     font-weight: 700;
     font-size: 36px;
-    line-height: 111%;
+    line-height: 1.11;
     letter-spacing: 0.02em;
     text-decoration: none;
     
@@ -2494,7 +2492,7 @@ opacity: 0.5;
     font-family: var(--third-family);
 font-weight: 400;
 font-size: 12px;
-line-height: 117%;
+line-height: 1.17;
 letter-spacing: 0.04em;
 color: #8e8f99;
 
@@ -2521,7 +2519,7 @@ color: #8e8f99;
     font-family: var(--third-family);
     font-weight: 500;
     font-size: 20px;
-    line-height: 120%;
+    line-height: 1.2;
     letter-spacing: 0.02em;
     text-decoration: none;
   }
@@ -2685,7 +2683,7 @@ margin-bottom: 24px;
     font-family: var(--third-family);
     font-weight: 500;
     font-size: 20px;
-    line-height: 120%;
+    line-height: 1.2;
     letter-spacing: 0.02em;
     text-decoration: none;
   }
@@ -2767,9 +2765,9 @@ stroke: #8c8c8e;
 @media screen and (min-width: 768px) {
   .menu-button,
   .mobile-menu {
-    display: none !important;
-    visibility: hidden !important;
-    opacity: 0 !important;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
   }
 }
 
