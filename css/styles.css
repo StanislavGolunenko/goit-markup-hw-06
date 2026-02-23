@@ -1778,6 +1778,15 @@ text-align: left;
 margin-top: 16px;
 }
 
+.input-icon {
+  position: absolute;
+  left: 12px;  /* отступ от левого края input */
+  top: 50%;    /* по вертикали */
+  transform: translateY(-50%);
+  pointer-events: none; /* чтобы клики проходили через svg к input */
+  z-index: 2;  /* поверх input */
+}
+
 .checkbox-link {
   text-decoration: underline;
 }
