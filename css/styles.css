@@ -1748,7 +1748,26 @@ margin-bottom: 8px;
     
   }
 
+/* Иконка */
+.input-wrap svg {
+  position: absolute;
+  left: 16px;              /* 16px от левого края */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+}
 
+/* Сам input */
+.form-input {
+  padding-left: 44px;      /* 16px + ширина иконки + небольшой отступ */
+  box-sizing: border-box;
+}
+
+.input-wrap {
+  position: relative;
+}
 
   
 
@@ -1778,15 +1797,6 @@ text-align: left;
 margin-top: 16px;
 }
 
-.input-icon {
-  position: absolute;
-  left: 12px;  /* отступ от левого края input */
-  top: 50%;    /* по вертикали */
-  transform: translateY(-50%);
-  pointer-events: none; /* чтобы клики проходили через svg к input */
-  z-index: 2;  /* поверх input */
-}
-
 .checkbox-link {
   text-decoration: underline;
 }
@@ -1795,8 +1805,7 @@ margin-top: 16px;
   display: flex;
   align-items: center;
   gap: 8px; /* ← РОВНО 8px от checkbox до текста */
-  width: 16px;
-  height: 16px;
+  
 }
 
   
