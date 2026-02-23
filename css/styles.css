@@ -1748,26 +1748,7 @@ margin-bottom: 8px;
     
   }
 
-/* Иконка */
-.input-wrap svg {
-  position: absolute;
-  left: 16px;              /* 16px от левого края */
-  top: 50%;
-  transform: translateY(-50%);
-  width: 18px;
-  height: 18px;
-  pointer-events: none;
-}
 
-/* Сам input */
-.form-input {
-  padding-left: 44px;      /* 16px + ширина иконки + небольшой отступ */
-  box-sizing: border-box;
-}
-
-.input-wrap {
-  position: relative;
-}
 
   
 
