@@ -1749,10 +1749,19 @@ margin-bottom: 8px;
     
   }
 
-  .input-wrap {
-    margin-top: -4px;
-     position: relative;
-  }
+  .input-wrap svg {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Добавляем место под иконку */
+.form-input {
+  padding-left: 40px; /* место под иконку */
+  box-sizing: border-box;
+}
 
   
 
