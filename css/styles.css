@@ -261,7 +261,7 @@ color: #2e2f42;
 
 .nav__link_nav__link--active {
   position: relative;
-  display: inline-block;
+  display: block;
   padding: 24px 0;
 }
 
@@ -540,6 +540,7 @@ margin-left: 300px;
     padding: 0 16px;               /* отступы слева и справа */
     box-sizing: border-box;
     background: #fff;
+
   } 
 
 
@@ -547,7 +548,7 @@ margin-left: 300px;
   .features-list { 
     display: grid; /* отменяем flex */ 
     grid-template-columns: repeat(2, 1fr); /* 2 карточки в ряд */ 
-    gap: 72px; 
+    gap: 72px 24px; 
     width: 100%; /* чтобы занимать всю ширину контейнера */ 
     justify-items: center; /* центрируем карточки внутри ячеек */ 
   } 
@@ -564,10 +565,13 @@ margin-left: 300px;
 
   .feature-title {
     font-size: 36px;
+    text-align: left;
   }
 
   .feature-text {
     font-size: 16px;
+     width: 356px;   
+ 
   }
 }
 
@@ -596,7 +600,10 @@ margin-left: 300px;
   }
 
   .feature-item {
-    width: auto;                
+     width: auto; 
+   width: 264px;        /* фиксированная ширина */
+    box-sizing: border-box; 
+  height: 100%; /* или фиксированная высота, например 250px */              
   }
 
   .icon-container {
@@ -614,12 +621,14 @@ margin-left: 300px;
     margin-bottom: 8px;
     font-size: 20px;
     font-weight: 600;
+      max-width: 264px;      
   }
 
   .feature-text {
     font-size: 16px;
     line-height: 1.5;
     color: #434455;
+      max-width: 264px;      
   }
 }
 
@@ -685,8 +694,7 @@ margin-left: 300px;
 }
 
 .social-icon {
-  width: 16px;
-  height: 16px;
+
 }
 
 .team-title {
@@ -1336,10 +1344,8 @@ display: none;
     color: #f4f4fd; 
     padding-top: 96px; /* верхний отступ */ 
     padding-bottom: 96px; /* нижний отступ */ 
-    
     box-sizing: border-box; 
-    width: 768px;
-    height: 456px;
+  
   } 
   
   .container-footer-flex { 
