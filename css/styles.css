@@ -1795,7 +1795,8 @@ margin-top: 16px;
   display: flex;
   align-items: center;
   gap: 8px; /* ← РОВНО 8px от checkbox до текста */
-  
+  width: 16px;
+  height: 16px;
 }
 
   
