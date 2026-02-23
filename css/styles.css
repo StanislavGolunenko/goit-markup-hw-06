@@ -1726,11 +1726,19 @@ display: none;
  /* ===== Field wrapper ===== */
 
   /* ===== Label ===== */
-  .form-label {
-    font-size: 12px;
-    color: #8e8f99;
-    margin-bottom: -4px; /* Label → Input = 4px */
-  }
+ /* поля формы */
+.form-field {
+  margin-bottom: 8px;
+}
+
+.form-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: var(--subtle-text, #8e8f99);
+  display: block;
+  margin-bottom: 4px; /* или 8px для большего пространства */
+}
 
  
 
@@ -1740,8 +1748,8 @@ border: 1px solid rgba(46, 47, 66, 0.4);
 border-radius: 4px;
 width: 256px;
 height: 40px;
-margin-top: -24px;
-margin-bottom: 8px;
+ margin-bottom: 8px;  /* можно оставить для отступа под input */
+  padding-left: 44px;  /* сохраняем отступ для иконки */
   }
 
   .form-label-comment {
