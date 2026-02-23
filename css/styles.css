@@ -94,8 +94,7 @@ margin: -1px;
     border: none; 
     cursor: pointer; 
     padding: 0; 
-    margin-top: 17.5px; /* чтобы совпадало с логотипом по вертикали */ 
-    margin-right: 52px; /* отступ от правого края */ 
+   
   } 
 
   .burger-container {
@@ -258,7 +257,6 @@ color: #2e2f42;
   font-weight: 500;
   color: #2e2f42;
   text-decoration: none;
-
 }
 
 .nav__link_nav__link--active {
@@ -308,10 +306,10 @@ color: #2e2f42;
     box-sizing: border-box;
     background-image: 
     linear-gradient(rgba(46, 47, 66, 0.6), rgba(46, 47, 66, 0.6)), 
-    url('../images/people-office1.jpg');
+    url('../images/people-office1\(MOBILE\).jpg');
   }
 
-    .hero-section .container1 {
+    .hero-section .container {
     display: flex;
     flex-direction: column;
     align-items: center; /* центрируем по горизонтали */
@@ -368,10 +366,10 @@ color: #2e2f42;
     box-sizing: border-box;
     background-image: 
     linear-gradient(rgba(46, 47, 66, 0.6), rgba(46, 47, 66, 0.6)), 
-    url('../images/people-office1.jpg');
+    url('../images/people-office1\(Tablet\).jpg');
   }
 
-    .hero-section .container1 {
+    .hero-section .container {
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -433,7 +431,7 @@ margin-left: 300px;
     align-items: center;     
   }
 
-  .hero-section .container1 {
+  .hero-section .container {
     display: flex;
     flex-direction: column; 
     align-items: center;    
@@ -441,6 +439,7 @@ margin-left: 300px;
     width: auto;            
     height: auto;
     box-sizing: border-box;
+    margin: 0 auto;
   }
 
 .hero-title {
@@ -627,9 +626,7 @@ margin-left: 300px;
 
 /* Мобильный Section 3 */
 .team-section {
-  width: 320px;
-  height: 2232px;
-  padding: 96px 16px 96px 16px; /* сверху 96, справа/слева 16, снизу 96 */
+  padding: 96px 16px; /* сверху 96, справа/слева 16, снизу 96 */
   box-sizing: border-box;
   margin: 0 auto;
   background: #f4f4fd;
@@ -649,9 +646,10 @@ margin-left: 300px;
   width: 264px;           
   height: 428px;          
   box-sizing: border-box;
-  border: 1px solid #e0e0e0; /* тонкий контур */
   border-radius: 4px;          /* скругление углов */
   overflow: hidden;            /* чтобы контент не вылазил за границы */
+  background: #fff;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .team-item-team-item-first img {
@@ -661,7 +659,7 @@ margin-left: 300px;
 }
 
 .team-info {
-  margin-top: 16px;       
+  padding: 32px 16px 32px 16px;
   text-align: center;     
 }
 
@@ -669,7 +667,6 @@ margin-left: 300px;
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 8px;
-  margin-top: 32px;
 }
 
 .team-role {
@@ -771,16 +768,22 @@ color: #2e2f42;
     margin: 0;
   }
 
-  .team-item-team-item-first {
-    width: 264px;                   /* ширина карточки */
-    height: 428px;                  /* высота карточки */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid #dcdcdc;      /* тонкая граница */
-    box-sizing: border-box;
-    position: relative;
-  }
+.team-item-team-item-first img {
+  width: 100%;            
+  height: auto;
+  display: block;
+}
+
+.team-info {
+  padding: 32px 16px 32px 16px;
+  text-align: center;     
+}
+
+.team-name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
 
   .social-list {
     display: flex;
@@ -795,12 +798,7 @@ color: #2e2f42;
   }
 
   
-.team-name {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 8px;
-  margin-top: 32px;
-}
+
 
 .team-role {
   font-size: 16px;
@@ -891,11 +889,11 @@ color: #2e2f42;
 
 .portfolio-section {
   width: 320px;
-  height: 2944px;
   background-color: #ffffff;
   margin: 0 auto;
   box-sizing: border-box;
    padding-top: 96px; 
+   padding-bottom: 96px;
 }
 
 .container-portfolio {
@@ -927,7 +925,7 @@ color: #2e2f42;
 /* Карточка */
 .portfolio-item {
   width: 288px;
-  height: 400px;
+
   box-sizing: border-box;
   background-color: #fff;
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
@@ -943,7 +941,7 @@ background: #fff;
 
 /* Текст карточки */
 .portfolio-info {
-  padding: 16px;
+  padding: 32px 16px;
   text-align: left;
 }
 
@@ -966,7 +964,6 @@ line-height: 1.5;
 letter-spacing: 0.02em;
 color: #434455;
 margin-top: 8px;
-margin-left: 16px;
 }
 
 .portfolio-overlay-text {
@@ -1159,9 +1156,7 @@ display: none;
 
 
 /* ===== Смартфон Footer ===== */
-.footer {
-  width: 320px;
-  height: 664px;              /* фиксированная высота */
+.footer {            /* фиксированная высота */
   background-color: #2e2f42;  /* фон футера */
   margin: 0 auto;
   padding: 96px 16px;         /* отступ сверху и снизу 96px */
@@ -1187,6 +1182,7 @@ display: none;
   display: flex;
   flex-direction: column;
   align-items: center;
+    margin-bottom: 72px;     /* от абзаца до блока social media */
         /* отступ от текста до social media */
 }
 
@@ -1219,7 +1215,6 @@ display: none;
   letter-spacing: 0.02em;
   color: #f4f4fd;
   margin-top: 16px;       /* от заголовка до абзаца */
-  margin-bottom: 72px;     /* от абзаца до блока social media */
   text-align: left;       /* текст по левому краю */
 }
 
