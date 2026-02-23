@@ -1756,15 +1756,17 @@ height: 40px;
     
   }
 
+
 /* Иконка */
 .input-wrap svg {
   position: absolute;
-  left: 16px;              /* 16px от левого края */
+  left: 16px;          /* 16px от левого края input */
   top: 50%;
   transform: translateY(-50%);
-  width: 18px;
+  width: 18px;         /* размер иконки */
   height: 18px;
-  pointer-events: none;
+  pointer-events: none; /* клики проходят к input */
+  z-index: 2;
 }
 
 /* Сам input */
