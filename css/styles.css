@@ -409,9 +409,12 @@ color: #2e2f42;
     padding-top: 72px;
     padding-bottom: 72px;
     box-sizing: border-box;
-    background-image: 
-    linear-gradient(rgba(46, 47, 66, 0.6), rgba(46, 47, 66, 0.6)), 
-    url('../images/people-office1\(Tablet\).jpg');
+   background-image:
+      linear-gradient(rgba(46, 47, 66, 0.6), rgba(46, 47, 66, 0.6)),
+      image-set(
+        url('../images/people-office1\(Tablet\).jpg') 1x,
+        url('../images/people-office1\(Tablet\)\(2x\).jpg') 2x
+      );
   }
 
     .hero-section .container {
@@ -465,12 +468,16 @@ margin-left: 300px;
   padding-top: 24px; 
     box-sizing: border-box;
 
-    background-image: 
-      linear-gradient(rgba(46, 47, 66, 0.6), rgba(46, 47, 66, 0.6)), 
-      url('../images/people-office1.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  background-image:
+  linear-gradient(rgba(46, 47, 66, 0.6), rgba(46, 47, 66, 0.6)),
+  image-set(
+    url('../images/people-office1\(Desktop\).jpg') 1x,
+    url('../images/people-office1\(Desktop\)\(2x\).jpg') 2x
+  );
+
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
 
     display: flex;           
     justify-content: center; 
