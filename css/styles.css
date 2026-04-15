@@ -1396,12 +1396,13 @@ display: none;
   } 
   
   .container-footer-flex { 
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: auto auto; 
+    display: grid;
+    grid-template-columns: 264px 1fr;
+    column-gap: 24px;
     gap: 24px; 
     max-width: calc(100% - 216px); /* учитываем слева и справа по 108px */ 
-    
+    margin-left: 108px;
+    margin-right: 164px; 
   } 
 
   /* Первый ряд */ 
@@ -1432,7 +1433,7 @@ display: none;
     flex-direction: column; 
     align-items: flex-start; 
     justify-content: flex-start; 
-    margin-left: -200px;
+    margin-left: 0;
   } 
 
 .subscribe-form { 
@@ -1472,7 +1473,6 @@ display: none;
     display: flex; 
     gap: 12px; 
     list-style: none; 
-    padding: 0; 
     margin: 0; 
   }
 
@@ -1509,7 +1509,7 @@ display: none;
 }
 
 .subscribe-title {
-  margin-top: -36px;
+    margin-top: 0;
 }
 }
 
@@ -1518,37 +1518,34 @@ display: none;
 /* Десктоп Section 4 */
 @media screen and (min-width: 1158px) {
 .footer {
-  width: 1440px;              /* ширина футера */
-  height: 312px;              /* высота футера */
-  background-color: #2e2f42; /* фон футера */
+  width: 1440px;
+  height: 312px;
+  background-color: #2e2f42;
   color: #fff;
-  padding: 100px;       /* отступы сверху/снизу и по бокам */
-  display: flex;
-  align-items: flex-start;    /* выравниваем блоки по верхнему краю */
-  justify-content: flex-start;/* блоки слева направо */
   box-sizing: border-box;
+  padding-right: 156px;
 }
 
 /* Контейнер для всех блоков */
 .container-footer-flex {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
- 
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 80px;
+
 }
 
 .footer-social {
   flex: 0 0 auto;
   width: 208px;
-  margin-right: 80px;        /* отступ до третьего блока */
-  margin-left: 120px;
+
 }
 
 /* Второй блок: соцсети */
 .footer-info {
   flex: 0 0 auto;            /* ширина зависит от контента */
   max-width: 264px;           /* ограничиваем ширину блока */
-  margin-left: 40px;
+
+  
 }
 
 /* Третий блок: подписка */
@@ -1559,9 +1556,6 @@ display: none;
   align-items: flex-start; /* ← вот это главное */
   gap: 10px;
   width: 100%;
-  margin-top: 35px;
-
-  
 }
 
 
