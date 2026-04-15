@@ -458,32 +458,30 @@ margin-left: 300px;
 
 /* Десктоп Section 1 */
 @media screen and (min-width: 1158px) { 
-  .hero-section {
+   .hero-section {
     max-width: 1440px;
     width: 100%;     
     height: 600px;
     margin: 0 auto;
-            /* убрали минус */
- 
+
+    padding-top: 188px;     /* ✅ ДОБАВИЛИ как требует задание */
+    padding-bottom: 188px;  /* ✅ ДОБАВИЛИ */
+
     box-sizing: border-box;
 
-  background-image:
-  linear-gradient(rgba(46, 47, 66, 0.6), rgba(46, 47, 66, 0.6)),
-  image-set(
-    url('../images/people-office1\(Desktop\).jpg') 1x,
-    url('../images/people-office1\(Desktop\)\(2x\).jpg') 2x
-  );
+    background-image:
+      linear-gradient(rgba(46, 47, 66, 0.6), rgba(46, 47, 66, 0.6)),
+      image-set(
+        url('../images/people-office1(Desktop).jpg') 1x,
+        url('../images/people-office1(Desktop)(2x).jpg') 2x
+      );
 
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+   }
 
-    display: flex;           
-    justify-content: center; 
-    align-items: center;     
-  }
-
-  .hero-section .container {
+.hero-section .container {
     display: flex;
     flex-direction: column; 
     align-items: center;    
@@ -501,7 +499,7 @@ background-size: cover;
   line-height: 1.07;
   letter-spacing: 0.02em;
   color: #fff;
-  
+    margin: 0;  
 }
 
 .hero-button {
@@ -512,7 +510,7 @@ background-size: cover;
   height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background: #4d5ae5;
-  margin: auto 0;     /* ← центрируем кнопку */
+ margin: auto 0;     /* ← центрируем кнопку */
 }
 }
 
