@@ -406,8 +406,7 @@ color: #2e2f42;
     width: 768px;
     height: 436px;
     margin: 0 auto;
-    padding-top: 72px;
-    padding-bottom: 72px;
+    padding-bottom: 112px;
     box-sizing: border-box;
    background-image:
       linear-gradient(rgba(46, 47, 66, 0.6), rgba(46, 47, 66, 0.6)),
@@ -421,7 +420,7 @@ color: #2e2f42;
     display: flex;
     flex-direction: column;
     align-items: center; 
-    justify-content: center;
+     justify-content: center;
     gap: 36px;
      box-sizing: border-box;
      margin-left: 136px;
@@ -465,7 +464,7 @@ margin-left: 300px;
     height: 600px;
     margin: 0 auto;
             /* убрали минус */
-  padding-top: 24px; 
+ 
     box-sizing: border-box;
 
   background-image:
@@ -502,7 +501,7 @@ background-size: cover;
   line-height: 1.07;
   letter-spacing: 0.02em;
   color: #fff;
-  margin: 64px 0 24px 0; /* отступ снизу для кнопки */
+  
 }
 
 .hero-button {
