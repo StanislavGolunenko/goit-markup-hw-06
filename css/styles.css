@@ -340,7 +340,6 @@ color: #2e2f42;
 
  /* Смартфон Section 1 */
   .hero-section {
-    width: 320px;
     height: 432px;
     margin: 0 auto;
     padding-top: 72px;
@@ -358,9 +357,7 @@ color: #2e2f42;
     display: flex;
     flex-direction: column;
     align-items: center; /* центрируем по горизонтали */
-    margin-left: 52px;
-    width: 216px;
-    height: 288px;
+     gap: 72px;
     }
 
 .hero-bg {
@@ -382,8 +379,9 @@ color: #2e2f42;
 
   .hero-title {
     text-align: center;
-    margin-bottom: 72px; /* расстояние между текстом и кнопкой */
     color: #fff;
+    max-width: 160px;
+     
   }
 
  
@@ -397,7 +395,6 @@ color: #2e2f42;
     cursor: pointer;
     font-weight: 500;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-
   }
 
  /* Планшет Section 1 */
@@ -406,6 +403,7 @@ color: #2e2f42;
     width: 768px;
     height: 436px;
     margin: 0 auto;
+      padding-top: 112px;
     padding-bottom: 112px;
     box-sizing: border-box;
    background-image:
@@ -419,17 +417,13 @@ color: #2e2f42;
     .hero-section .container {
     display: flex;
     flex-direction: column;
-    align-items: center; 
-     justify-content: center;
     gap: 36px;
      box-sizing: border-box;
-     margin-left: 136px;
-    width: 216px;
-    height: 288px;
+     margin-left: 0 auto;
+    
     }
 
   .hero-title {
-    width: 496px;
     height: 120px;
     text-align: center;
     font-family: var(--third-family);
@@ -437,8 +431,8 @@ font-weight: 700;
 font-size: 56px;
  line-height: 1.07;
 letter-spacing: 0.02em;
-text-align: center;
-margin: 0 auto;
+max-width: 496px;
+  margin: 0;
     color: #fff;
   }
 
@@ -449,7 +443,7 @@ width: 169px;
 height: 56px;
 box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 background: #4d5ae5;
-margin-left: 300px;
+
   } 
 } 
 
