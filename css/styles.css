@@ -159,6 +159,9 @@ color: #2e2f42;
     display: block;
 }
 
+
+
+
 .header-nav {
     display: flex;
     align-items: center;
@@ -225,6 +228,9 @@ gap: 12px;
 
 .contact-link {
 color: #434455;
+font-weight: 400;
+font-size: 12px;
+line-height: 1.17;
 }
 
   .logo-studio {
@@ -258,7 +264,7 @@ color: #2e2f42;
 
 
    .contact-list {
-font-size: 12px;
+font-size: 16px;
 line-height: 1.17;
 letter-spacing: 0.04em;
 color: #434455;
@@ -381,7 +387,6 @@ color: #2e2f42;
     text-align: center;
     color: #fff;
     max-width: 160px;
-     
   }
 
  
@@ -400,7 +405,6 @@ color: #2e2f42;
  /* Планшет Section 1 */
  @media screen and (min-width: 768px) { 
    .hero-section {
-    width: 768px;
     height: 436px;
     margin: 0 auto;
       padding-top: 112px;
@@ -494,6 +498,7 @@ background: #4d5ae5;
   letter-spacing: 0.02em;
   color: #fff;
     margin: 0;  
+  
 }
 
 .hero-button {
@@ -625,7 +630,7 @@ background: #4d5ae5;
 /* Десктоп Section 2 */
 @media screen and (min-width: 1158px) {
 .features-section {
-  width: 1440px;
+  width: 100%; 
   min-height: 464px;       
   padding: 120px 156px; 
   margin: 0 auto;
@@ -664,15 +669,22 @@ background: #4d5ae5;
 
   .feature-title {
     margin-bottom: 8px;
-    font-size: 20px;
-    font-weight: 600;
+   font-family: var(--third-family);
+font-weight: 500;
+font-size: 20px;
+line-height: 120%;
+letter-spacing: 0.02em;
+color: #2e2f42;
       max-width: 264px;      
   }
 
   .feature-text {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #434455;
+    font-family: var(--third-family);
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: 0.02em;
+color: #434455;
       max-width: 264px;      
   }
 }
@@ -738,9 +750,6 @@ background: #4d5ae5;
   list-style: none;
 }
 
-.social-icon {
-
-}
 
 .team-title {
   font-family: var(--third-family);
@@ -894,7 +903,7 @@ color: #2e2f42;
 /* Десктоп Section 3 */
 @media screen and (min-width: 1158px) {
 .team-section {
-    width: 1440px;
+     width: 100%; 
     height: 780px;
     background-color: #f4f4fd;
     padding: 120px 0;
@@ -1029,7 +1038,7 @@ display: none;
 /* Планшет Section 4 */
 @media screen and (min-width: 768px) {
  .portfolio-section {
-    width: 768px;
+     width: 100%; 
     height: 1708px;
     margin: 0 auto;
     padding: 96px 16px; /* отступы секции */
@@ -1103,7 +1112,7 @@ display: none;
 @media screen and (min-width: 1158px) {
 
   .portfolio-section {
-    width: 1440px;
+    width: 100%; 
     height: 1240px;
     margin: 0 auto;
     padding-top: 120px;    /* отступ сверху до заголовка */
@@ -1123,7 +1132,7 @@ display: none;
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 карточки в ряд */
     column-gap: 24px;  /* горизонтальные отступы */
-    row-gap: 40px;     /* вертикальные отступы между рядами */
+    row-gap: 48px;     /* вертикальные отступы между рядами */
     list-style: none;
     margin: 0;
     padding: 0 16px; /* отступы слева и справа всей сетки */
@@ -1294,7 +1303,7 @@ display: none;
   margin-bottom: 16px;
 }
 
-.social-list {
+.footer-social-list {
   display: flex;
   justify-content: center;
   gap: 16px;                /* расстояние между иконками */
@@ -1395,7 +1404,7 @@ display: none;
     padding-top: 96px; /* верхний отступ */ 
     padding-bottom: 96px; /* нижний отступ */ 
     box-sizing: border-box; 
-  
+     width: 100%; 
   } 
   
   .container-footer-flex { 
@@ -1468,7 +1477,7 @@ display: none;
   } 
 
   /* Соцсети */ 
-  .social-list { 
+  .footer-social-list { 
     display: flex; 
     gap: 12px; 
     list-style: none; 
@@ -1517,7 +1526,7 @@ display: none;
 /* Десктоп Section 4 */
 @media screen and (min-width: 1158px) {
 .footer {
-  width: 1440px;
+   width: 100%; 
   height: 312px;
   background-color: #2e2f42;
   color: #fff;
@@ -1588,7 +1597,7 @@ display: none;
   margin-left: 3px;
 }
 
-.social-list {
+.footer-social-list {
   display: flex;
   gap: 16px;
   list-style: none;
