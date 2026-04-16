@@ -278,7 +278,7 @@ gap: 40px;
     font-family: var(--third-family);
 font-weight: 400;
 font-size: 16px;
-line-height: 1.15;
+line-height: 1.5;
 letter-spacing: 0.02em;
 color: #434455;
 }
@@ -744,7 +744,7 @@ color: #434455;
 .social-list {
   display: flex;
   justify-content: center;
-  gap: 8px;               
+  gap: 24px;               
   padding: 0;
   margin: 0;
   list-style: none;
@@ -763,18 +763,6 @@ color: #2e2f42;
    margin-bottom: 72px; 
 }
 
-/* Соцсети */
-.social-list {
-  display: flex;
-  justify-content: flex-start;
-  gap: 24px;               /* расстояние между кругами */
-  width: 100%;
-  padding: 0 16px;         /* отступы слева и справа */
-  margin-top: auto;         /* прижать к низу карточки */
-  margin-bottom: 32px;      /* от нижнего края карточки */
-  list-style: none;
-  box-sizing: border-box;
-}
 
 .social-item {
   width: 40px;
@@ -830,7 +818,7 @@ color: #2e2f42;
   }
 
 .team-item-team-item-first img {
-  width: 100%;            
+  width: 264px;            
   height: auto;
   display: block;
 }
@@ -846,17 +834,16 @@ color: #2e2f42;
   margin-bottom: 8px;
 }
 
-  .social-list {
-    display: flex;
-    justify-content: flex-start;
-    gap: 24px;                     /* расстояние между кругами */
-    width: 100%;
-    padding: 0 16px;               /* отступы слева/справа внутри карточки */
-    margin-top: auto;
-    margin-bottom: 32px;           /* расстояние от нижнего края карточки */
-    list-style: none;
-    box-sizing: border-box;
-  }
+.social-list {
+  display: flex;
+  justify-content: center;   /* 🔥 центр по горизонтали */
+  align-items: center;
+  gap: 24px;
+
+  padding: 0;
+  margin: 16px auto 0;       /* 🔥 авто-центрирование блока */
+  list-style: none;
+}
 
   
 
@@ -867,19 +854,6 @@ color: #2e2f42;
   margin-bottom: 16px;
 }
 
-
-/* Соцсети */
-.social-list {
-  display: flex;
-  justify-content: flex-start;
-  gap: 24px;               /* расстояние между кругами */
-  width: 100%;
-  padding: 0 16px;         /* отступы слева и справа */
-  margin-top: auto;         /* прижать к низу карточки */
-  margin-bottom: 32px;      /* от нижнего края карточки */
-  list-style: none;
-  box-sizing: border-box;
-}
 
 .social-item {
   width: 40px;
@@ -941,8 +915,12 @@ color: #2e2f42;
     box-shadow:
       0px 1px 6px rgba(46, 47, 66, 0.08),
       0px 1px 1px rgba(46, 47, 66, 0.16),
-      0px 2px 1px rgba(46, 47, 66, 0.08);
+      0
+      px 2px 1px rgba(46, 47, 66, 0.08);
+
   }
+
+  
 }
 
 /* Смартфон Section 4 */
@@ -2628,8 +2606,8 @@ opacity: 0.5;
 }
 
 .social-networks .social-link svg {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   fill: #f4f4fd;
 }
 
