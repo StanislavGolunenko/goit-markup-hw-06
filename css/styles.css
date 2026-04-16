@@ -1239,6 +1239,9 @@ display: none;
 .container-footer-flex {
   padding-left: 16px;
   padding-right: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
 }
 
 .footer-info .logo-part1 {
@@ -1520,6 +1523,7 @@ display: none;
   color: #fff;
   box-sizing: border-box;
   padding-right: 156px;
+  padding-left: 156px;
 }
 
 /* Контейнер для всех блоков */
