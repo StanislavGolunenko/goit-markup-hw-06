@@ -1398,11 +1398,9 @@ display: none;
   .container-footer-flex { 
     display: grid;
     grid-template-columns: 264px 1fr;
-    column-gap: 24px;
     gap: 24px; 
     max-width: calc(100% - 216px); /* учитываем слева и справа по 108px */ 
-    margin-left: 108px;
-    margin-right: 164px; 
+
   } 
 
   /* Первый ряд */ 
@@ -1421,9 +1419,8 @@ display: none;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
-  margin-top: 16px;       /* от заголовка до абзаца */
-  margin-bottom: 72px;     /* от абзаца до блока social media */
   text-align: left;       /* текст по левому краю */
+   margin-bottom: 72px; /* ← расстояние до поля ввода */
 }
   
   .footer-social { 
@@ -1438,15 +1435,15 @@ display: none;
 
 .subscribe-form { 
   display: grid; 
-  grid-template-columns: 264px 1fr; /* поле ввода 264px, кнопка занимает оставшееся место */ 
-  gap: 24px; /* отступ между полем и кнопкой */ 
+   grid-template-columns: 264px auto; /* поле ввода 264px, кнопка занимает оставшееся место */ 
+  gap: 48px; /* отступ между полем и кнопкой */ 
   width: 100%; 
 }
 
   .subscribe-input { 
     grid-column: 1 / 2; 
     width: 264px; 
-    padding: 12px 14px; 
+   
     border-radius: 4px; 
     border: 1px solid rgba(255,255,255,0.3); 
     background-color: transparent; 
@@ -1456,16 +1453,15 @@ display: none;
 
   .subscribe-btn { 
     grid-column: 2 / 3; 
-    width: 100%; 
-    padding: 12px 24px; 
+    width: 165px;
+    
     border-radius: 4px; 
     border: none; 
     background-color: #4d5ae5; 
     color: #fff; 
     cursor: pointer; 
     box-sizing: border-box; 
-    margin-left: 24px;
-
+    
   } 
 
   /* Соцсети */ 
@@ -1494,7 +1490,7 @@ display: none;
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* ← вот это главное */
-  gap: 10px;
+  gap: 16px;
   width: 100%;
 }
 
@@ -1505,11 +1501,11 @@ display: none;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
-  margin-left: 24px;
+
 }
 
 .subscribe-title {
-    margin-top: 0;
+    margin-bottom: 0;
 }
 }
 
@@ -2486,341 +2482,143 @@ opacity: 0.5;
 
 
 
+/* =========================
+   MOBILE MENU (CLEAN)
+========================= */
 
-/* Смартфон Mobile Menu */
-  .mobile-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;            /* меню растягивается на всю высоту экрана */
-    background: #fff;
-    transform: translateX(100%);
-    transition: 400ms ease-in;
-    z-index: 9999;
-    overflow-y: auto;          /* если контента слишком много — появляется прокрутка */
-  }
-
-  .mobile-menu.is-open {
-    transform: translateX(0);
-  }
-
- .mobile-menu .container2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  height: 100%;
-  padding: 72px 16px 40px;     /* отступ сверху 72px, как нужно */
-  box-sizing: border-box;
-}
-
-  .mobile-menu-container {
-    display: block;
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-    z-index: 1001;
-  }
-
-  .mobile-menu-container svg {
-    width: 100%;
-    height: 100%;
-    fill: #000;
-  }
-
-  .header-container {
-    position: relative;
-  }
-
-.mobile-menu-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 40px; /* отступы между Studio / Portfolio / Contacts */
-  list-style: none;
-  padding: 0;
-  margin: 0; /* убираем margin-top */
-}
-
-  .mobile-menu-link {
-    font-family: var(--third-family);
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.11;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-    
-  }
-
-  .form-label-comment {
-    font-family: var(--third-family);
-font-weight: 400;
-font-size: 12px;
-line-height: 1.17;
-letter-spacing: 0.04em;
-color: #8e8f99;
-
-  }
-
-  .mobile-menu-nav li:first-child .mobile-menu-link {
-    color: #404bbf;
-  }
-
-  .mobile-menu-nav li:nth-child(2) .mobile-menu-link,
-  .mobile-menu-nav li:nth-child(3) .mobile-menu-link {
-    color: #2e2f42;
-  }
-
-  .mobile-menu-contacts {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    margin-top: 168px;
-    list-style: none;
-  }
-
-  .mobile-menu-contacts .mobile-menu-link {
-    font-family: var(--third-family);
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-  }
-
-  .mobile-menu-contacts li:first-child .mobile-menu-link {
-    color: #4d5ae5;
-  }
-
-  .mobile-menu-contacts li:last-child .mobile-menu-link {
-    color: #434455;
-  }
-
-  .mobile-menu-btn {
-    position: absolute;
-    top: 24px;
-    right: 24px;
-    width: 24px;
-    height: 24px;
-    border-radius: 100%;
-    fill: #e7e9fc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 1002;
-fill: #e7e9fc;
-stroke-width: 1px;
-stroke: #8c8c8e;
-margin-top: 48px;
-margin-bottom: 24px;
-border: 1px solid #D0D2E3; 
-
-  }
-
-  .mobile-menu-btn svg {
-    width: 24px;
-    height: 24px;
-     fill: none;    
- stroke-width: 1px;
-border: 1px solid #D0D2E3; 
-  }
-
-.social-networks {
-    display: flex;
-    justify-content: flex-start;
-    gap: 40px;
-    margin-top: 48px;   /* 🔹 расстояние от почты до соцсетей */
-    list-style: none;
-  }
-
-  .social-networks li {
-    margin: 0;
-  }
-
-
-  .social-networks .social-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #4d5ae5;
-  }
-
-
- 
-  .social-networks .social-link svg {
-    width: 20px;
-    height: 20px;
-    fill: #f4f4fd;
-  }
-
-
-
-  /* Смартфон Mobile Menu */
 .mobile-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;            /* меню растягивается на всю высоту экрана */
-    background: #fff;
-    transform: translateX(100%);
-    transition: 400ms ease-in;
-    z-index: 9999;
-    overflow-y: auto;          /* если контента слишком много — появляется прокрутка */
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  transform: translateX(100%);
+  transition: 400ms ease-in;
+  z-index: 9999;
+  overflow-y: auto;
+}
 
-  .mobile-menu.is-open {
-    transform: translateX(0);
-  }
+.mobile-menu.is-open {
+  transform: translateX(0);
+}
 
- .mobile-menu .container2 {
+/* контейнер */
+.mobile-menu .container2 {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   height: 100%;
-  padding: 72px 16px 40px;     /* отступ сверху 72px, как нужно */
+  padding: 72px 16px 40px;
   box-sizing: border-box;
 }
 
-  .mobile-menu-container {
-    display: block;
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-    z-index: 1001;
-  }
+/* кнопка закрытия */
+.mobile-menu-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #e7e9fc;
+  border: 1px solid #2e2f42;
 
-  .mobile-menu-container svg {
-    width: 100%;
-    height: 100%;
-    fill: #000;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  .header-container {
-    position: relative;
-  }
+  cursor: pointer;
+  z-index: 1002;
+}
 
+.mobile-menu-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: #2e2f42;
+  stroke-width: 1px;
+}
+
+/* NAV */
 .mobile-menu-nav {
   display: flex;
   flex-direction: column;
-  gap: 40px; /* отступы между Studio / Portfolio / Contacts */
+  gap: 40px;
   list-style: none;
   padding: 0;
-  margin-top: 24px;
+  margin: 0;
 }
 
-  .mobile-menu-link {
-    font-family: var(--third-family);
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 111%;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-  }
+.mobile-menu-link {
+  font-family: var(--third-family);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: #2e2f42;
+}
 
-  .mobile-menu-nav li:first-child .mobile-menu-link {
-    color: #404bbf;
-  }
+/* активный пункт */
+.mobile-menu-nav li:first-child .mobile-menu-link {
+  color: #404bbf;
+}
 
-  .mobile-menu-nav li:nth-child(2) .mobile-menu-link,
-  .mobile-menu-nav li:nth-child(3) .mobile-menu-link {
-    color: #2e2f42;
-  }
+/* CONTACTS */
+.mobile-menu-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  list-style: none;
 
-  .mobile-menu-contacts {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    margin-top: 168px;
-    list-style: none;
-  }
+  margin-top: auto; /* 🔥 ВАЖНО: вместо 168px */
+  padding: 0;
+}
 
-  .mobile-menu-contacts .mobile-menu-link {
-    font-family: var(--third-family);
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-  }
+.mobile-menu-contacts .mobile-menu-link {
+  font-family: var(--third-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
 
-  .mobile-menu-contacts li:first-child .mobile-menu-link {
-    color: #4d5ae5;
-  }
+.mobile-menu-contacts li:first-child .mobile-menu-link {
+  color: #4d5ae5;
+}
 
-  .mobile-menu-contacts li:last-child .mobile-menu-link {
-    color: #434455;
-  }
+.mobile-menu-contacts li:last-child .mobile-menu-link {
+  color: #434455;
+}
 
-  .mobile-menu-btn {
-    position: absolute;
-    top: -12px;
-    right: 24px;
-    width: 24px;
-    height: 24px;
-    border-radius: 100%;
-    background-color: #e7e9fc;
-    border: 1px solid #2e2f42;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 1002;
-fill: #e7e9fc;
-stroke-width: 1px;
-stroke: #8c8c8e;
-  }
-
-  .mobile-menu-btn svg {
-    width: 24px;
-    height: 24px;
-    fill: none;
-    stroke: #2e2f42;
-    stroke-width: 1px;
-  }
-
+/* SOCIAL */
 .social-networks {
-    display: flex;
-    justify-content: flex-start;
-    gap: 40px;
-    margin-top: 48px;   /* 🔹 расстояние от почты до соцсетей */
-    margin-bottom: 40px; /* от нижнего края окна */
-    list-style: none;
-  }
+  display: flex;
+  gap: 40px;
+  list-style: none;
 
-  .social-networks li {
-    margin: 0;
-  }
-
-
-  .social-networks .social-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #4d5ae5;
-  }
-
-
+  margin-top: 48px;
  
-  .social-networks .social-link svg {
-    width: 20px;
-    height: 20px;
-    fill: #f4f4fd;
-  }
+  padding: 0;
+}
 
+.social-networks .social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4d5ae5;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-networks .social-link svg {
+  width: 20px;
+  height: 20px;
+  fill: #f4f4fd;
+}
 
 
 
