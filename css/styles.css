@@ -387,6 +387,13 @@ color: #2e2f42;
     text-align: center;
     color: #fff;
     max-width: 160px;
+    font-family: var(--third-family);
+font-weight: 700;
+font-size: 36px;
+line-height: 111%;
+letter-spacing: 0.02em;
+text-align: center;
+color: #fff;
   }
 
  
@@ -575,6 +582,28 @@ background: #4d5ae5;
   flex-direction: column;
 }
 
+  .feature-title {
+font-family: var(--third-family);
+font-weight: 700;
+font-size: 36px;
+line-height: 111%;
+letter-spacing: 0.02em;
+text-align: center;
+color: #2e2f42;
+  }
+
+  .feature-text {
+font-family: var(--third-family);
+font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: 0.02em;
+color: #434455; 
+    
+  }
+
+
+
 
 
 /* Планшет Section 2 */
@@ -614,14 +643,25 @@ background: #4d5ae5;
   } 
 
   .feature-title {
-    font-size: 36px;
-    text-align: left;
+ font-family: var(--third-family);
+font-weight: 700;
+font-size: 36px;
+line-height: 111%;
+letter-spacing: 0.02em;
+color: #2e2f42;
+  text-align: left;
   }
 
   .feature-text {
+    font-family: var(--third-family);
+font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: 0.02em;
+color: #434455;
     font-size: 16px;
      width: 356px;   
- 
+    
   }
 }
 
@@ -651,7 +691,7 @@ background: #4d5ae5;
 
   .feature-item {
      width: auto; 
-   width: 264px;        /* фиксированная ширина */
+    width: 100%;       /* фиксированная ширина */
     box-sizing: border-box; 
   height: 100%; /* или фиксированная высота, например 250px */              
   }
@@ -1124,7 +1164,7 @@ display: none;
     margin: 0 auto;
     box-sizing: border-box;
     background-color: #fff;
-  box-shadow: none;
+   box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   transition: box-shadow 250ms ease;
   }
 
@@ -1518,8 +1558,7 @@ display: none;
   background-color: #2e2f42;
   color: #fff;
   box-sizing: border-box;
-  padding-right: 156px;
-  padding-left: 156px;
+   padding: 96px 156px;
 }
 
 /* Контейнер для всех блоков */
