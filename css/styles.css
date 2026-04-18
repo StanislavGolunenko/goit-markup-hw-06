@@ -386,7 +386,7 @@ color: #2e2f42;
   .hero-title {
     text-align: center;
     color: #fff;
-    max-width: 160px;
+     max-width: 216px;
     font-family: var(--third-family);
 font-weight: 700;
 font-size: 36px;
@@ -614,7 +614,7 @@ color: #434455;
     align-items: center;           /* центрируем по горизонтали */
     justify-content: center;       /* центрируем по вертикали */
     margin: 0 auto;                
-    width: 768px;
+    width: 100%;
     min-height: 504px;                 /* фиксированная высота */
     padding: 0 16px;               /* отступы слева и справа */
     box-sizing: border-box;
@@ -1211,26 +1211,49 @@ display: none;
 /* Overlay скрыт по умолчанию */
 
 
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: #4d5ae5;   /* ✔ синий фон */
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 32px 164px 32px;
+  box-sizing: border-box;
+
+  transform: translateY(100%);
+  transition: transform 250ms ease;
+   z-index: 2;
+    
+}
+
 /* Текст на overlay */
 .portfolio-overlay-text {
-  color: #ffffff;   /* белый текст */
-  font-size: 14px;
-  line-height: 1.4;
-  z-index: 3;       /* выше синего фона */
+  font-family: var(--third-family);
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: 0.02em;
+color: #f4f4fd;
+text-align: center;
+display: block;
+text-align: left;
+
 }
 
 .portfolio-img-container img {
   display: block;
 }
 
-/* Текст внутри overlay */
-.portfolio-overlay-text {
-  color: #fff;
-  font-size: 14px;
-  text-align: center;
-}
 
-.portfolio-img-container:hover .portfolio-overlay {
+.portfolio-item:hover .portfolio-overlay {
   transform: translateY(0);
 }
 
@@ -1558,15 +1581,21 @@ display: none;
   background-color: #2e2f42;
   color: #fff;
   box-sizing: border-box;
-   padding: 96px 156px;
+  padding: 96px 0;
 }
 
 /* Контейнер для всех блоков */
 .container-footer-flex {
   display: grid;
-  grid-template-columns: auto auto auto;
+
+  grid-template-columns: 264px 208px 453px; /* ✅ фикс */
   column-gap: 80px;
 
+  max-width: 1158px; /* обязательно */
+  margin: 0 auto;
+
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .footer-social {
@@ -1589,8 +1618,8 @@ display: none;
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* ← вот это главное */
-  gap: 10px;
-  width: 100%;
+  gap: 16px;
+    width: auto;
 }
 
 
@@ -1670,6 +1699,7 @@ display: none;
   padding: 0 16px;
   cursor: pointer;
   margin-top: 0;
+  width: 165px;
 }
 
 .subscribe-input::placeholder {
@@ -1691,6 +1721,12 @@ display: none;
   margin-top: 16px;       /* от заголовка до абзаца */
   margin-bottom: 72px;     /* от абзаца до блока social media */
   text-align: left;       /* текст по левому краю */
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 24px;        /* ✔ расстояние между input и кнопкой */
+   flex-direction: row;
 }
 }
 
